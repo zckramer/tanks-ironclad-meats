@@ -1,11 +1,13 @@
 import './App.css';
 import { useState } from 'react';
+import { Document } from 'react-pdf';
 
 import Header from './components/Header';
 import About from './components/About';
 import Menu from './components/Menu';
-// import MenuImage from '';
 
+import MeatImg1 from './images/meat01.jpg';
+import TanksLogo from './images/logo_1.svg';
 
 function App() {
   const [isShowMenu, setIsShowMenu] = useState(false)
@@ -23,11 +25,11 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App"  style={{ backgroundImage: `url(${MeatImg1})`, backgroundRepeat: 'no-repeat'} }>
       <Header navClick={(e)=>handleNavClick(e)} />
-      <div className="Body" >
-        <h3>Tank's Ironclad Meats</h3>
-        {isShowMenu ? <Menu menuImage='' /> : <About />}
+      <div className="Body">
+        {/* <img src={MeatImg1} alt="Zoom in on meat background one" id="Background-Image-01"/> */}
+        {isShowMenu ? <Menu menuImage='' /> : <About logo={TanksLogo}/>}
       </div>
     </div>
   );

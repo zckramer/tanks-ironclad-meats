@@ -8,7 +8,6 @@ const Header = (props) => {
             <div className="Header__Item">Catering</div>
             <div className="Header__Item">Contact</div>
         </div>
-
     )
 }
 export default Header;
