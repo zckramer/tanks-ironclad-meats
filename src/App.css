@@ -9,15 +9,13 @@ HTML {
 
 .App {
   color: white;
+  width: 100vw;
 }
 
 .About {
-  margin: 30px;
-  padding: 30px;
-  border-radius: 15px;
-  background-color: #282c348a;
-  border: 2px solid darkslategray;
-
+  position: absolute;
+  top: 60px;
+  width: 60%;
 }
 
 .About__Header {
@@ -26,18 +24,31 @@ HTML {
   justify-content: center;
 }
 
+.About-Panel {
+  margin: 30px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #282c348a;
+  border: 2px solid darkslategray;
+}
+
+.About-Panel__Section {
+  margin: 1.5rem;
+}
+
 .Body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  min-height: 100vh; 
-  
+  height: 100vh; 
+  width: 100vw;
+  overflow: hidden;
 }
 
 .Header {
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: 100%;
   background-color: #282c34;
   max-height: 80px;
   min-height: 40px;
@@ -46,6 +57,7 @@ HTML {
   align-items: center;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
+  margin-bottom: 5rem;
 }
 
 .Header__Item {
@@ -87,12 +99,14 @@ HTML {
 }
 
 #Tank-Title {
-  font-size: 42pt;
+  font-size: pt;
 }
 
 #Tank-Logo {
-  width: 100%;
-  margin: 2rem;
+  /* width: 100%; 
+  margin: 1rem; */
+  fill: whitesmoke;
+  color: whitesmoke;
 }
 
 #Background-Image-01 {
