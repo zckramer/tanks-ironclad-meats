@@ -3,7 +3,8 @@ const About = (props) => {
         <div className="About">
             <div className="About-Panel">
                 <div className="About__Header">
-                    <img src={props.logo} alt="Tanks Logo" />
+                    {/* <img src={props.logo} alt="Tanks Logo" /> */}
+                    <hr style={{width: '70%'}} />
                 </div>
                 <div className="About__Panel">
                     <div>Jeff "Tank" Harkleroad</div>
@@ -26,6 +27,8 @@ const About = (props) => {
                         361 E Whittier St, Columbus, OH 43206
                     </div>
                 </div>
+                <hr style={{width: '70%'}} />
+
                 <div className="About-Panel__Section">
                     <div>Brewstirs of Beechwold</div>
                     <div>

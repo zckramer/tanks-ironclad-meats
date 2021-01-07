@@ -20,6 +20,7 @@ HTML {
 
 .About__Header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -46,16 +47,17 @@ HTML {
 }
 
 .Header {
+  color: black;
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: #282c34;
+  background-color: whitesmoke;
   max-height: 80px;
   min-height: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   margin-bottom: 5rem;
 }
@@ -73,40 +75,63 @@ HTML {
 }
 
 .Menu {
-  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
   padding: 30px;
+  width: auto;
+  height: auto;
+}
+
+.Menu__Section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 40%;
   border-radius: 15px;
   background-color: #282c34ad;
   border: 2px solid darkslategray;
-  min-width: 60%;
+  margin: 1rem;
+  padding: 8px;
+  border: 4px solid darkgray;
+  border-radius: 8px;
 }
 
 .Menu__Section-Header {
   text-decoration: underline;
   font-weight: bold;
+  font-size: 24pt;
 }
 
 .Menu__Item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 0px;
+  margin: 4px;
+
 }
 
+.react-pdf__Page {
+  height: 600px;
+}
 #Logo__Header {
   max-height: 80px;
   min-height: 40px;
 }
 
+#MenuPDF {
+height: 75vh;
+}
+
 #Tank-Title {
-  font-size: pt;
+  /* font-size: pt; */
 }
 
 #Tank-Logo {
-  /* width: 100%; 
-  margin: 1rem; */
-  fill: whitesmoke;
-  color: whitesmoke;
+  max-height: 80px;
+  /* width: 60%; */
 }
 
 #Background-Image-01 {
@@ -115,4 +140,8 @@ HTML {
   top: 0;
   max-width: 100vw;
   z-index: -3;
+}
+
+#Sampler-Text {
+  color: firebrick;
 }
