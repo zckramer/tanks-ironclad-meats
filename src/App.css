@@ -8,8 +8,9 @@ HTML {
 }
 
 .App {
-  color: white;
+  color: #FFFFF7;
   width: 100vw;
+  height: 100vh;
 }
 
 .About {
@@ -51,7 +52,7 @@ HTML {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: whitesmoke;
+  background-color: #D7DEE6;
   max-height: 80px;
   min-height: 40px;
   display: flex;
@@ -71,17 +72,36 @@ HTML {
 }
 
 .Header__Item:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-.Menu {
+.MenuPages {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  justify-content: center;
   
   padding: 30px;
-  width: auto;
-  height: auto;
+  width: 100vw;
+  height: 80vh;
+}
+
+.MenuSections {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  /* padding: 30px; */
+  width: 100vw;
+  height: 80vh;
+}
+
+.Menu-Buttons-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  margin: 1rem;
 }
 
 .Menu__Section {
@@ -113,24 +133,40 @@ HTML {
 
 }
 
-.react-pdf__Page {
-  height: 600px;
+.Menu-Buttons-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.Page-Button {
+  display: flex;
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  border: 3px solid whitesmoke;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+  margin: 2px;
+  height: 50%;
+  width: 3rem;
+}
+
+.placeholder {
+
+}
+
 #Logo__Header {
   max-height: 80px;
   min-height: 40px;
 }
 
-#MenuPDF {
-height: 75vh;
-}
-
-#Tank-Title {
-  /* font-size: pt; */
-}
-
 #Tank-Logo {
   max-height: 80px;
+  padding: 5px;
   /* width: 60%; */
 }
 

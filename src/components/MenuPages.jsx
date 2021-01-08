@@ -24,7 +24,7 @@ const Menu = (props) => {
     }
     
     return (
-        <div className='Menu'>
+        <div className='MenuPages'>
             <Document
                 file={props.menu}
                 loading={"Loading Page..."}
