@@ -1,28 +1,39 @@
+import './App.css';
 import { useState } from 'react';
 
-const MenuSections = () => {
-    const [sections, setSections] = useState([
-        'http://placekitten.com/800/800',
-        'http://placekitten.com/1000/1000',
-        'http://placekitten.com/600/600'
-    ])
+import Header from './components/Header';
+import About from './components/About';
+// import Menu from './components/Menu';
+// import MenuFile from './Tanks_Menu_5.pdf';
+import Menu from './components/MenuSections';
+// import MenuFile from './images/meat'
 
-    const [sectionToShow, setSectionToShow] = useState(sections[0]);
+import MeatImg1 from './images/meat01.jpg';
 
-    function handleChangePage (section) {
-        console.log("page to show: ", sections[section])
-        setSectionToShow(sections[section])
+function App() {
+  const [isShowMenu, setIsShowMenu] = useState(false);
+
+  function handleNavClick (target) {
+    if (target === "MENU") {
+      console.log(target);
+      setIsShowMenu(true)
+    } else setIsShowMenu(false);
+
+    if (target === "PIG") {
+      console.log(target);
+      setIsShowMenu(false);
     }
+  }
 
-    return (
-        <div className='MenuSections'>
-            <img src={sectionToShow} style={{height: "600px", width: "600px", borderRadius:"16px"}}/>
-                <div className="Menu-Buttons-Container">
-                <div className="Page-Button" onClick={()=>handleChangePage(0)}>A</div>
-                <div className="Page-Button" onClick={()=>handleChangePage(1)}>B</div>
-                <div className="Page-Button" onClick={()=>handleChangePage(2)}>C</div>
-            </div>
-        </div>
-    )
+  return (
+    <div className="App"  style={{ backgroundImage: `url(${MeatImg1})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat'} }>
+      <Header navClick={(e)=>handleNavClick(e)} />
+      <div className="Body">
+        {/* {isShowMenu ? <Menu menu={MenuFile} /> : <About  />} */}
+        {isShowMenu ? <Menu /> : <About  />}
+      </div>
+    </div>
+  );
 }
-export default MenuSections;
+
+export default App;
