@@ -53,14 +53,18 @@ const useMobileStyles = createUseStyles({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        height: '95%',
+        paddingTop: 20,
+        margin: 0,
     },
     header: {
         color: 'black',
         display: 'flex',
         flexDirection: 'row',
+        position: 'fixed',
+        top: 0,
         alignItems: 'center',
         justifyContent: 'space-around',
-        top: 0,
         width: '100%',
         backgroundColor: '#D7DEE6',
         height: 40,
@@ -96,7 +100,15 @@ const useMobileStyles = createUseStyles({
         overflow: 'scrollY'
     },
     menu: {
-
+        height: '90%'
+    },
+    menuButtonContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+        width: '100%'
+        // height: '90%'
     }
 });
 
@@ -123,11 +135,15 @@ function App() {
 
             />
             {isShowMenu ? 
-                <MenuSections /> : 
+                <MenuSections 
+                    className={isMobileView ? mobileClasses.menu : desktopClasses.menu}
+                    buttonContainerClass={isMobileView ? mobileClasses.menuButtonContainer : desktopClasses.menuButtonContainer}
+                /> : 
                 <About 
                     className={isMobileView ? mobileClasses.about : desktopClasses.about}
                     panelClass={isMobileView ? mobileClasses.aboutPanel : desktopClasses.aboutPanel}
-            />}
+                />
+            }
         </div>
     </div>
   );
