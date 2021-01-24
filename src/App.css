@@ -13,30 +13,30 @@ HTML {
   height: 100vh;
 }
 
-.About {
+/* .About {
   position: absolute;
   top: 60px;
   width: 60%;
-}
+} */
 
-.About__Header {
+/* .About__Header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.About-Panel {
+/* .About-Panel {
   margin: 30px;
   padding: 30px;
   border-radius: 15px;
   background-color: #282c348a;
   border: 2px solid darkslategray;
-}
+} */
 
-.About-Panel__Section {
+/* .About-Panel__Section {
   margin: 1.5rem;
-}
+} */
 
 .Body {
   display: flex;
@@ -93,9 +93,9 @@ HTML {
   transition: .2s;
 }
 
-.Header__Item:hover {
+/* .Header__Item:hover {
   transform: scale(1.05);
-}
+} */
 
 .MenuPages {
   display: flex;
@@ -177,11 +177,10 @@ HTML {
   width: 3rem;
 }
 
-#Tank-Logo {
-  max-height: 64px;
+/* #Tank-Logo {
+  max-height: 100%;
   max-width: 60%;
-
-}
+} */
 
 #Background-Image-01 {
   display: flex;

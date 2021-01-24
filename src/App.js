@@ -25,7 +25,6 @@ const useDesktopStyles = createUseStyles({
     },
     header: {
         color: 'black',
-        position: 'absolute',
         top: '0',
         width: '100%',
         backgroundColor: '#D7DEE6',
@@ -51,6 +50,7 @@ const useMobileStyles = createUseStyles({
     },
     body: {
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -63,8 +63,20 @@ const useMobileStyles = createUseStyles({
         top: 0,
         width: '100%',
         backgroundColor: '#D7DEE6',
-        maxHeight: 40,
+        height: 40,
         fontSize: 'calc(10px + 2vmin)',
+    },
+    headerItem: {
+        userSelect: 'none',
+        height: 38,
+        maxWidth: '60%',
+        transition: '.5s',
+        '&:hover': {
+            transform: 'scale(1.05)'
+        }
+    },
+    about: {
+        
     }
 });
 
@@ -84,7 +96,12 @@ function App() {
   return (
     <div className={isMobileView ? mobileClasses.app : desktopClasses.app} >
         <div className={isMobileView ? mobileClasses.body : desktopClasses.body}>
-            <Header className={isMobileView ? mobileClasses.header : desktopClasses.header} navClick={(e)=>handleNavClick(e)}/>
+            <Header 
+                className={isMobileView ? mobileClasses.header : desktopClasses.header} 
+                headerItemClass={isMobileView ? mobileClasses.headerItem : desktopClasses.headerItem}
+                navClick={(e)=>handleNavClick(e)}
+
+            />
             {isShowMenu ? <MenuSections /> : <About />}
         </div>
     </div>

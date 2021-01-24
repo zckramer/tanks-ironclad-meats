@@ -3,8 +3,8 @@ import TankLogo from '../images/Logo_Tank.png';
 const Header = (props) => {
     return (
         <div className={props.className}>
-            <img className="Header__Item" src={TankLogo} alt="Tank Logo" id="Tank-Logo" onClick={()=>props.navClick("ABOUT")}/>
-            <div className="Header__Item" onClick={()=>props.navClick("MENU")} >Menu</div>
+            <img className={props.headerItemClass} src={TankLogo} alt="Tank Logo" onClick={()=>props.navClick("ABOUT")}/>
+            <div className={props.headerItemClass} onClick={()=>props.navClick("MENU")} >MENU</div>
         </div>
     )
 }
