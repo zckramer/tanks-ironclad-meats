@@ -1,7 +1,7 @@
-const About = () => {
+const About = (props) => {
     return (
-        <div className="About">
-            <div className="About-Panel">
+        <div className={props.className}>
+            <div className={props.panelClass}>
                 <div className="About__Header">
                 </div>
                 <div className="About__Panel">
@@ -12,7 +12,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className="About-Panel">
+            <div className={props.panelClass}>
                 <div className="About__Header">
                     Where you can find us: 
                 </div>

@@ -76,7 +76,27 @@ const useMobileStyles = createUseStyles({
         }
     },
     about: {
-        
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+    },
+    aboutPanel: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#282c348a',
+        border: '2px solid darkslategray',
+        borderRadius: '8px',
+        margin: 8,
+        padding: 4,
+        width: '70%',
+        overflow: 'scrollY'
+    },
+    menu: {
+
     }
 });
 
@@ -102,7 +122,12 @@ function App() {
                 navClick={(e)=>handleNavClick(e)}
 
             />
-            {isShowMenu ? <MenuSections /> : <About />}
+            {isShowMenu ? 
+                <MenuSections /> : 
+                <About 
+                    className={isMobileView ? mobileClasses.about : desktopClasses.about}
+                    panelClass={isMobileView ? mobileClasses.aboutPanel : desktopClasses.aboutPanel}
+            />}
         </div>
     </div>
   );
