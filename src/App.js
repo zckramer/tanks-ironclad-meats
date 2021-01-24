@@ -13,31 +13,93 @@ const useDesktopStyles = createUseStyles({
     app: {
         color: '#FFFFF7',
         width: '100vw',
-        height: '100vh',
-        backgroundImage: `url(${MeatImg1})`,
-        backgroundSize: 'cover',
+        height: '100vh',      
+        backgroundImage: `url(${MeatImg1})`, 
+        backgroundSize: 'fill', 
         backgroundRepeat: 'no-repeat',
     },
     body: {
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        height: '95%',
+        margin: 0,
     },
     header: {
         color: 'black',
-        top: '0',
-        width: '100%',
-        backgroundColor: '#D7DEE6',
-        maxHeight: '80px',
-        minHeight: '40px',
         display: 'flex',
         flexDirection: 'row',
+        position: 'fixed',
+        top: 0,
         alignItems: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
+        width: '100%',
+        backgroundColor: '#D7DEE6',
+        height: 80,
         fontSize: 'calc(10px + 2vmin)',
-        marginBottom: '5rem'
+    },
+    headerItem: {
+        userSelect: 'none',
+        cursor: 'pointer',
+        height: 70,
+        maxWidth: '60%',
+        transition: '.5s',
+        '&:hover': {
+            transform: 'scale(1.05)'
+        }
+    },
+    about: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+    },
+    aboutPanel: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#282c348a',
+        border: '2px solid darkslategray',
+        borderRadius: '8px',
+        margin: 8,
+        padding: 4,
+        width: '70%',
+        overflow: 'scrollY'
+    },
+    menu: {
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        alignItems: 'center',
+        height: '100vh',
+        marginTop: 100,
+    },
+    menuButtonContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+        height: '100%'
+    },
+    menuButton: {
+        display: 'flex',
+        color: '#000000',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'whitesmoke',
+        border: '3px solid whitesmoke',
+        borderRadius: '8px',
+        userSelect: 'none',
+        cursor: 'pointer',
+        margin: '2px',
+        width: '3rem',
+        height: '20%'
     }
 });
+    
 
 const useMobileStyles = createUseStyles({
     app: {
@@ -138,6 +200,7 @@ function App() {
                 <MenuSections 
                     className={isMobileView ? mobileClasses.menu : desktopClasses.menu}
                     buttonContainerClass={isMobileView ? mobileClasses.menuButtonContainer : desktopClasses.menuButtonContainer}
+                    buttonClass={isMobileView ? mobileClasses.menuButton : desktopClasses.menuButton}
                 /> : 
                 <About 
                     className={isMobileView ? mobileClasses.about : desktopClasses.about}

@@ -3,9 +3,9 @@ const About = (props) => {
         <div className={props.className}>
             <div className={props.panelClass}>
                 <div className="About__Header">
+                    Jeff "Tank" Harkleroad
                 </div>
                 <div className="About__Panel">
-                    <div>Jeff "Tank" Harkleroad</div>
                     <div>
                         Serving Columbus and central Ohio, we make smoked and 
                         slow-cooked meats and comfort cuisine.

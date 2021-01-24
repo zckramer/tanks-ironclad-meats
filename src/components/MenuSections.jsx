@@ -15,11 +15,11 @@ const MenuSections = (props) => {
 
     return (
         <div className={props.className}>
-            <img src={sectionToShow} style={{height: "330px", width: "330px", borderRadius:"16px"}}/>
+            <img src={sectionToShow} style={{height: "80%", width: "80%", borderRadius:"16px"}}/>
             <div className={props.buttonContainerClass}>
-                <div className="Page-Button" onClick={()=>handleChangePage(0)}>A</div>
-                <div className="Page-Button" onClick={()=>handleChangePage(1)}>B</div>
-                <div className="Page-Button" onClick={()=>handleChangePage(2)}>C</div>
+                <div className={props.buttonClass} onClick={()=>handleChangePage(0)} style={{width: '20%'}}>A</div>
+                <div className={props.buttonClass} onClick={()=>handleChangePage(1)} style={{width: '20%'}}>B</div>
+                <div className={props.buttonClass} onClick={()=>handleChangePage(2)} style={{width: '20%'}}>C</div>
             </div>
         </div>
     )
