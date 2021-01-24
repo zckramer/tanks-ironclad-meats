@@ -47,7 +47,7 @@ HTML {
   overflow: hidden;
 }
 
-.Header {
+/* .Header {
   color: black;
   position: absolute;
   top: 0;
@@ -61,7 +61,7 @@ HTML {
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
   margin-bottom: 5rem;
-}
+} */
 
 .Header-Mobile {
   color: black;

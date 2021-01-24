@@ -56,18 +56,15 @@ const useMobileStyles = createUseStyles({
     },
     header: {
         color: 'black',
-        position: 'absolute',
-        top: '0',
-        width: '100%',
-        backgroundColor: '#D7DEE6',
-        maxHeight: '80px',
-        minHeight: '40px',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',
+        top: 0,
+        width: '100%',
+        backgroundColor: '#D7DEE6',
+        maxHeight: 40,
         fontSize: 'calc(10px + 2vmin)',
-        marginBottom: '5rem'
     }
 });
 
