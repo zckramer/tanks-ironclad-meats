@@ -162,15 +162,34 @@ const useMobileStyles = createUseStyles({
         overflow: 'scrollY'
     },
     menu: {
-        height: '90%'
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: window.innerHeight > window.innerWidth ? "column" : "row-reverse" ,
+        height: '90%',
+        
     },
     menuButtonContainer: {
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: window.innerHeight > window.innerWidth ? "row" : "column",
         alignItems: 'center',
         justifyContent: 'space-evenly',
         width: '100%'
-        // height: '90%'
+    },
+    menuButton: {
+        display: 'flex',
+        color: '#000000',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'whitesmoke',
+        border: '3px solid whitesmoke',
+        borderRadius: '8px',
+        userSelect: 'none',
+        cursor: 'pointer',
+        margin: '2px',
+        width: '3rem',
+        height: window.innerHeight > window.innerWidth ? '30px' : '20%',
+
     }
 });
 
