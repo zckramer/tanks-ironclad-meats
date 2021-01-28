@@ -1,7 +1,9 @@
+// credits: Gonzalo Moldonado, article @ https://medium.com/@mustwin/responsive-react-9b56d63c4edc
+
 import './App.css';
 import { useState } from 'react';
 import { createUseStyles } from 'react-jss';
-import { useMediaQuery } from 'react-responsive';
+import MediaQuery, { useMediaQuery } from 'react-responsive';
 
 import Header from './components/Header';
 import About from './components/About';
@@ -29,7 +31,7 @@ const useDesktopStyles = createUseStyles({
     header: {
         color: 'black',
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'row-reverse',
         position: 'fixed',
         top: 0,
         alignItems: 'center',
@@ -100,15 +102,14 @@ const useDesktopStyles = createUseStyles({
     }
 });
 
-
-const useMobileStyles = createUseStyles({
+const useMobileStylesPortrait = createUseStyles({
     app: {
         color: '#FFFFF7',
         width: '100vw',
         height: '100vh',      
         backgroundImage: `url(${MeatImg1})`, 
         backgroundSize: 'fill', 
-        backgroundRepeat: 'no-repeat',
+        backgroundRepeat: 'no-repeat'
     },
     body: {
         display: 'flex',
@@ -117,12 +118,12 @@ const useMobileStyles = createUseStyles({
         alignItems: 'center',
         height: '95%',
         paddingTop: 20,
-        margin: 0,
+        margin: 0
     },
     header: {
         color: 'black',
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'row-reverse',
         position: 'fixed',
         top: 0,
         alignItems: 'center',
@@ -146,7 +147,7 @@ const useMobileStyles = createUseStyles({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '100%',
+        width: '100%'
     },
     aboutPanel: {
         display: 'flex',
@@ -165,13 +166,12 @@ const useMobileStyles = createUseStyles({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: window.innerHeight > window.innerWidth ? "column" : "row-reverse" ,
-        height: '90%',
-        
+        flexDirection: 'column',
+        height: '90%'
     },
     menuButtonContainer: {
         display: 'flex',
-        flexDirection: window.innerHeight > window.innerWidth ? "row" : "column",
+        flexDirection: "row",
         alignItems: 'center',
         justifyContent: 'space-evenly',
         width: '100%'
@@ -188,18 +188,105 @@ const useMobileStyles = createUseStyles({
         cursor: 'pointer',
         margin: '2px',
         width: '3rem',
-        height: window.innerHeight > window.innerWidth ? '30px' : '20%',
-        
+        height: '30px'
+    }
+});
+
+const useMobileStylesLandscape = createUseStyles({
+    app: {
+        color: '#FFFFF7',
+        width: '100vw',
+        height: '100vh',      
+        backgroundImage: `url(${MeatImg1})`, 
+        backgroundSize: 'fill', 
+        backgroundRepeat: 'no-repeat'
+    },
+    body: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '95%',
+        paddingTop: 20,
+        margin: 0
+    },
+    header: {
+        color: 'black',
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        position: 'fixed',
+        top: 0,
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        width: '100%',
+        backgroundColor: '#D7DEE6',
+        height: 40,
+        fontSize: 'calc(10px + 2vmin)',
+    },
+    headerItem: {
+        userSelect: 'none',
+        height: 38,
+        maxWidth: '60%',
+        transition: '.5s',
+        '&:hover': {
+            transform: 'scale(1.05)'
+        }
+    },
+    about: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%'
+    },
+    aboutPanel: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#282c348a',
+        border: '2px solid darkslategray',
+        borderRadius: '8px',
+        margin: 8,
+        padding: 4,
+        width: '70%',
+        overflow: 'scrollY'
+    },
+    menu: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        height: '90%'
+    },
+    menuButtonContainer: {
+        display: 'flex',
+        flexDirection: "row",
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+        width: '100%'
+    },
+    menuButton: {
+        display: 'flex',
+        color: '#000000',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'whitesmoke',
+        border: '3px solid whitesmoke',
+        borderRadius: '8px',
+        userSelect: 'none',
+        cursor: 'pointer',
+        margin: '2px',
+        width: '3rem',
+        height: '30px'
     }
 });
 
 function App() {
     const isMobileView = useMediaQuery({ query: `(max-width: 760px)` });
-    const isWide = useMediaQuery({ query: `(max-width: 400px)` });
     const [isShowMenu, setIsShowMenu] = useState(false);
-    const mobileClasses = useMobileStyles();
     const desktopClasses = useDesktopStyles();
-    
+    let mobileClasses = useMobileStylesPortrait();
     
     
     function handleNavClick (target) {
@@ -216,8 +303,20 @@ function App() {
                 className={isMobileView ? mobileClasses.header : desktopClasses.header} 
                 headerItemClass={isMobileView ? mobileClasses.headerItem : desktopClasses.headerItem}
                 navClick={(e)=>handleNavClick(e)}
-                />
-            {isShowMenu ? 
+            />
+            <MediaQuery query='(min-device-width: 1224px)'>
+                <div>You are a desktop or laptop</div> {/*Desktop styled component goes here */}
+            </MediaQuery>
+        
+            <MediaQuery query='(max-device-width: 1224px)'>
+                <MediaQuery query='(orientation: portrait)'>
+                    <div>You are portrait</div>
+                </MediaQuery>
+                <MediaQuery query='(orientation: landscape)'>
+                    <div>You are landscape</div>
+                </MediaQuery>
+            </MediaQuery>
+            {/* {isShowMenu ? 
                 <MenuSections 
                 className={isMobileView ? mobileClasses.menu : desktopClasses.menu}
                 buttonContainerClass={isMobileView ? mobileClasses.menuButtonContainer : desktopClasses.menuButtonContainer}
@@ -227,7 +326,7 @@ function App() {
                     className={isMobileView ? mobileClasses.about : desktopClasses.about}
                     panelClass={isMobileView ? mobileClasses.aboutPanel : desktopClasses.aboutPanel}
                 />
-            }
+            } */}
         </div>
     </div>
   );
