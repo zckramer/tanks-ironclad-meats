@@ -234,10 +234,8 @@ const useMobileStylesLandscape = createUseStyles({
 });
 
 function App() {
-    const isMobileView = useMediaQuery({ query: `(min-device-width: 1224px)` });
     const [isShowMenu, setIsShowMenu] = useState(false);
     const styles = useStyles();
-    // let mobileClasses = useMobileStylesPortrait();
     
     function handleNavClick (target) {
         if (target === "MENU") {
@@ -259,14 +257,20 @@ function App() {
                 <div>You are a desktop or laptop</div>
             </MediaQuery>
             <MediaQuery query='(max-device-width: 1224px)'>
-                <div>You are a tablet or mobile phone</div>
+                <HeaderMobile 
+                    navClick={(e)=>handleNavClick(e)}
+                />
+                {!isShowMenu ? 
+                    <AboutMobile /> : <MenuMobile />
+                }
+                {/* <div>You are a tablet or mobile phone</div> */}
             </MediaQuery>
-            <MediaQuery query='(orientation: portrait)'>
+            {/* <MediaQuery query='(orientation: portrait)'>
                 <div>You are portrait</div>
             </MediaQuery>
             <MediaQuery query='(orientation: landscape)'>
                 <div>You are landscape</div>
-            </MediaQuery>
+            </MediaQuery> */}
         </div>
 
             {/* {!isMobileView ? ( */}

@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import TankLogo from '../images/Logo_Tank.png';
 
-const styles = createUseStyles({
+const useStyles = createUseStyles({
     header: {
         color: 'black',
         display: 'flex',
@@ -12,28 +12,27 @@ const styles = createUseStyles({
         justifyContent: 'space-evenly',
         width: '100%',
         backgroundColor: '#D7DEE6',
-        height: 80,
+        height: 46,
         fontSize: 'calc(10px + 2vmin)',
     },
     headerItem: {
         userSelect: 'none',
-        cursor: 'pointer',
-        height: 70,
+        height: 46,
         maxWidth: '60%',
-        transition: '.5s',
-        '&:hover': {
-            transform: 'scale(1.05)'
+        transition: '.1s',
+        '&:active': {
+            transform: 'scale(1.1)'
         }
     }
 })
 
-const HeaderMobile = (props) => {
+const Header = (props) => {
+    const styles = useStyles();
     return (
-        <div className={styles.header} >
-            <img className={styles.headerItem} src={TankLogo} alt="Tank Logo" id="Tank-Logo" onClick={()=>props.navClick("PIG")}/>
-            <div className={styles.headerItem} onClick={()=>props.navClick("MENU")} >Menu</div>
-        
+        <div className={styles.header}>
+            <img className={styles.headerItem} src={TankLogo} alt="Tank Logo" onClick={()=>props.navClick("ABOUT")}/>
+            <div className={styles.headerItem} onClick={()=>props.navClick("MENU")} >MENU</div>
         </div>
     )
 }
-export default HeaderMobile;
+export default Header;
