@@ -6,12 +6,15 @@ import { createUseStyles } from 'react-jss';
 import MediaQuery, { useMediaQuery } from 'react-responsive';
 
 import Header from './components/Header';
+import HeaderMobile from './components/HeaderMobile';
 import About from './components/About';
+import AboutMobile from './components/AboutMobile';
+import Menu from './components/MenuSections';
+import MenuMobile from './components/MenuSectionsMobile';
 
 import MeatImg1 from './images/meat01.jpg';
-import MenuSections from './components/MenuSections';
 
-const useDesktopStyles = createUseStyles({
+const useStyles = createUseStyles({
     app: {
         color: '#FFFFF7',
         width: '100vw',
@@ -27,49 +30,6 @@ const useDesktopStyles = createUseStyles({
         alignItems: 'center',
         height: '95%',
         margin: 0,
-    },
-    header: {
-        color: 'black',
-        display: 'flex',
-        flexDirection: 'row-reverse',
-        position: 'fixed',
-        top: 0,
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        width: '100%',
-        backgroundColor: '#D7DEE6',
-        height: 80,
-        fontSize: 'calc(10px + 2vmin)',
-    },
-    headerItem: {
-        userSelect: 'none',
-        cursor: 'pointer',
-        height: 70,
-        maxWidth: '60%',
-        transition: '.5s',
-        '&:hover': {
-            transform: 'scale(1.05)'
-        }
-    },
-    about: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-    },
-    aboutPanel: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#282c348a',
-        border: '2px solid darkslategray',
-        borderRadius: '8px',
-        margin: 8,
-        padding: 4,
-        width: '70%',
-        overflow: 'scrollY'
     },
     menu: {
         display: 'flex',
@@ -110,15 +70,6 @@ const useMobileStylesPortrait = createUseStyles({
         backgroundImage: `url(${MeatImg1})`, 
         backgroundSize: 'fill', 
         backgroundRepeat: 'no-repeat'
-    },
-    body: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '95%',
-        paddingTop: 20,
-        margin: 0
     },
     header: {
         color: 'black',
@@ -283,11 +234,10 @@ const useMobileStylesLandscape = createUseStyles({
 });
 
 function App() {
-    const isMobileView = useMediaQuery({ query: `(max-width: 760px)` });
+    const isMobileView = useMediaQuery({ query: `(min-device-width: 1224px)` });
     const [isShowMenu, setIsShowMenu] = useState(false);
-    const desktopClasses = useDesktopStyles();
-    let mobileClasses = useMobileStylesPortrait();
-    
+    const styles = useStyles();
+    // let mobileClasses = useMobileStylesPortrait();
     
     function handleNavClick (target) {
         if (target === "MENU") {
@@ -297,38 +247,47 @@ function App() {
     }
     
     return (
-        <div className={isMobileView ? mobileClasses.app : desktopClasses.app} >
-        <div className={isMobileView ? mobileClasses.body : desktopClasses.body}>
-            <Header 
-                className={isMobileView ? mobileClasses.header : desktopClasses.header} 
-                headerItemClass={isMobileView ? mobileClasses.headerItem : desktopClasses.headerItem}
-                navClick={(e)=>handleNavClick(e)}
-            />
+        <div className={styles.app}>
+            <div className={styles.body}>
             <MediaQuery query='(min-device-width: 1224px)'>
-                <div>You are a desktop or laptop</div> {/*Desktop styled component goes here */}
-            </MediaQuery>
-        
-            <MediaQuery query='(max-device-width: 1224px)'>
-                <MediaQuery query='(orientation: portrait)'>
-                    <div>You are portrait</div>
-                </MediaQuery>
-                <MediaQuery query='(orientation: landscape)'>
-                    <div>You are landscape</div>
-                </MediaQuery>
-            </MediaQuery>
-            {/* {isShowMenu ? 
-                <MenuSections 
-                className={isMobileView ? mobileClasses.menu : desktopClasses.menu}
-                buttonContainerClass={isMobileView ? mobileClasses.menuButtonContainer : desktopClasses.menuButtonContainer}
-                buttonClass={isMobileView ? mobileClasses.menuButton : desktopClasses.menuButton}
-                /> : 
-                <About 
-                    className={isMobileView ? mobileClasses.about : desktopClasses.about}
-                    panelClass={isMobileView ? mobileClasses.aboutPanel : desktopClasses.aboutPanel}
+                <Header 
+                    navClick={(e)=>handleNavClick(e)}
                 />
-            } */}
+                {!isShowMenu ? 
+                    <About /> : <Menu />
+                }
+                <div>You are a desktop or laptop</div>
+            </MediaQuery>
+            <MediaQuery query='(max-device-width: 1224px)'>
+                <div>You are a tablet or mobile phone</div>
+            </MediaQuery>
+            <MediaQuery query='(orientation: portrait)'>
+                <div>You are portrait</div>
+            </MediaQuery>
+            <MediaQuery query='(orientation: landscape)'>
+                <div>You are landscape</div>
+            </MediaQuery>
         </div>
-    </div>
+
+            {/* {!isMobileView ? ( */}
+                {/* <MediaQuery query='(min-device-width: 1224px)'> */}
+                    {/* <div className={styles.body}> */}
+                        {/* Desktop styled component goes here */}
+                        {/* <Header  */}
+                            {/* navClick={(e)=>handleNavClick(e)} */}
+                        {/* /> */}
+                    {/* </div> */}
+                {/* </MediaQuery>) */}
+            {/* : */}
+                {/* <MediaQuery query='(max-device-width: 1224px)'> */}
+                    {/* Mobile styled component goes here */}
+                    {/* <HeaderMobile */}
+                        {/* navClick={(e)=>handleNavClick(e)} */}
+                    {/* /> */}
+                {/* </MediaQuery> */}
+            {/* } */}
+        </div>
+            
   );
 }
 

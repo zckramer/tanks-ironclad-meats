@@ -1,22 +1,55 @@
+import { createUseStyles } from 'react-jss';
+
+const useStyles = createUseStyles({
+    about: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+    },
+    aboutPanel: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#282c348a',
+        border: '2px solid darkslategray',
+        borderRadius: '8px',
+        margin: 8,
+        padding: 4,
+        width: '70%',
+        overflow: 'scrollY'
+    },
+    aboutPanelHeader: {
+        scale: 1.3
+    },
+    aboutPanelSection: {
+        margin: '1rem',
+
+    }
+})
+
 const About = (props) => {
+    const styles = useStyles();
     return (
-        <div className={props.className}>
-            <div className={props.panelClass}>
-                <div className="About__Header">
+        <div className={styles.about}>
+            <div className={styles.aboutPanel}>
+                <div className={styles.aboutPanelHeader}>
                     Jeff "Tank" Harkleroad
                 </div>
-                <div className="About__Panel">
+                <div className={styles.aboutPanelSection}>
                     <div>
                         Serving Columbus and central Ohio, we make smoked and 
                         slow-cooked meats and comfort cuisine.
                     </div>
                 </div>
             </div>
-            <div className={props.panelClass}>
-                <div className="About__Header">
+            <div className={styles.aboutPanel}>
+                <div className={styles.aboutPanelHeader}>
                     Where you can find us: 
                 </div>
-                <div className="About-Panel__Section">
+                <div className={styles.aboutPanelSection}>
                     <div>The Hey Hey</div>
                     <div>
                         Every Sunday, 2PM - 10PM 
@@ -26,7 +59,7 @@ const About = (props) => {
                     </div>
                 </div>
                 <hr style={{width: '70%'}} />
-                <div className="About-Panel__Section">
+                <div className={styles.aboutPanelSection}>
                     <div>Brewstirs of Beechwold</div>
                     <div>
                         Every day, Noon - 10PM
@@ -36,7 +69,7 @@ const About = (props) => {
                     </div>
                 </div>
                 <hr style={{width: '70%'}} />
-                <div className="About-Panel__Section">
+                <div className={styles.aboutPanelSection}>
                     <div>Leipzig Haus</div>
                     <div>
                         Thursday - Saturday, Noon - 10PM
