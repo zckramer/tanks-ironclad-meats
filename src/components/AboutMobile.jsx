@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
-import MediaQuery, { useMediaQuery } from 'react-responsive';
+import MediaQuery from 'react-responsive';
 
 const useStylesPortrait = createUseStyles({
     about: {
@@ -9,6 +8,7 @@ const useStylesPortrait = createUseStyles({
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
+        paddingTop: 55
     },
     aboutPanel: {
         display: 'flex',
@@ -27,8 +27,7 @@ const useStylesPortrait = createUseStyles({
         scale: 1.3
     },
     aboutPanelSection: {
-        margin: '1rem',
-
+        margin: '1rem'
     }
 })
 
@@ -39,6 +38,7 @@ const useStylesLandscape = createUseStyles({
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
+        paddingTop: 60
     },
     aboutPanel: {
         display: 'flex',
@@ -57,8 +57,7 @@ const useStylesLandscape = createUseStyles({
         scale: 1.3
     },
     aboutPanelSection: {
-        margin: '1rem',
-
+        margin: 2
     }
 })
 
@@ -116,7 +115,6 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div>You are portrait</div>
             </MediaQuery>
             <MediaQuery query='(orientation: landscape)'>
             <div className={stylesLandscape.about}>
@@ -166,7 +164,6 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div>You are landscape</div>
             </MediaQuery>
         </div>
     )
