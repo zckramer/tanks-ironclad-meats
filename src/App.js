@@ -99,7 +99,7 @@ const useDesktopStyles = createUseStyles({
         height: '20%'
     }
 });
-    
+
 
 const useMobileStyles = createUseStyles({
     app: {
@@ -189,37 +189,39 @@ const useMobileStyles = createUseStyles({
         margin: '2px',
         width: '3rem',
         height: window.innerHeight > window.innerWidth ? '30px' : '20%',
-
+        
     }
 });
 
 function App() {
-  const isMobileView = useMediaQuery({ query: `(max-width: 760px)` });
-  const [isShowMenu, setIsShowMenu] = useState(false);
-  const mobileClasses = useMobileStyles();
-  const desktopClasses = useDesktopStyles();
-
-  function handleNavClick (target) {
-    if (target === "MENU") {
-      console.log(target);
-      setIsShowMenu(true);
-    } else setIsShowMenu(false);
-  }
-
-  return (
-    <div className={isMobileView ? mobileClasses.app : desktopClasses.app} >
+    const isMobileView = useMediaQuery({ query: `(max-width: 760px)` });
+    const isWide = useMediaQuery({ query: `(max-width: 400px)` });
+    const [isShowMenu, setIsShowMenu] = useState(false);
+    const mobileClasses = useMobileStyles();
+    const desktopClasses = useDesktopStyles();
+    
+    
+    
+    function handleNavClick (target) {
+        if (target === "MENU") {
+            console.log(target);
+            setIsShowMenu(true);
+        } else setIsShowMenu(false);
+    }
+    
+    return (
+        <div className={isMobileView ? mobileClasses.app : desktopClasses.app} >
         <div className={isMobileView ? mobileClasses.body : desktopClasses.body}>
             <Header 
                 className={isMobileView ? mobileClasses.header : desktopClasses.header} 
                 headerItemClass={isMobileView ? mobileClasses.headerItem : desktopClasses.headerItem}
                 navClick={(e)=>handleNavClick(e)}
-
-            />
+                />
             {isShowMenu ? 
                 <MenuSections 
-                    className={isMobileView ? mobileClasses.menu : desktopClasses.menu}
-                    buttonContainerClass={isMobileView ? mobileClasses.menuButtonContainer : desktopClasses.menuButtonContainer}
-                    buttonClass={isMobileView ? mobileClasses.menuButton : desktopClasses.menuButton}
+                className={isMobileView ? mobileClasses.menu : desktopClasses.menu}
+                buttonContainerClass={isMobileView ? mobileClasses.menuButtonContainer : desktopClasses.menuButtonContainer}
+                buttonClass={isMobileView ? mobileClasses.menuButton : desktopClasses.menuButton}
                 /> : 
                 <About 
                     className={isMobileView ? mobileClasses.about : desktopClasses.about}

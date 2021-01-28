@@ -19,7 +19,7 @@ const About = (props) => {
                 <div className="About-Panel__Section">
                     <div>The Hey Hey</div>
                     <div>
-                        Every Sunday, Noon - 10PM 
+                        Every Sunday, 2PM - 10PM 
                     </div>
                     <div>
                         361 E Whittier St, Columbus, OH 43206
@@ -39,7 +39,7 @@ const About = (props) => {
                 <div className="About-Panel__Section">
                     <div>Leipzig Haus</div>
                     <div>
-                        Friday - Saturday, 5PM - 10PM
+                        Thursday - Saturday, Noon - 10PM
                     </div>
                     <div>
                         2201 East Livingston Ave, Columbus, Ohio 43209
