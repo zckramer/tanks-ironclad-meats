@@ -265,12 +265,6 @@ function App() {
                 }
                 {/* <div>You are a tablet or mobile phone</div> */}
             </MediaQuery>
-            {/* <MediaQuery query='(orientation: portrait)'>
-                <div>You are portrait</div>
-            </MediaQuery>
-            <MediaQuery query='(orientation: landscape)'>
-                <div>You are landscape</div>
-            </MediaQuery> */}
         </div>
 
             {/* {!isMobileView ? ( */}
