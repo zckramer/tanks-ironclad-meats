@@ -30,7 +30,7 @@ const useStyles = createUseStyles({
     }
 })
 
-const About = (props) => {
+const About = () => {
     const styles = useStyles();
     return (
         <div className={styles.about}>
@@ -50,7 +50,9 @@ const About = (props) => {
                     Where you can find us: 
                 </div>
                 <div className={styles.aboutPanelSection}>
-                    <div>The Hey Hey</div>
+                    <div>
+                        <a href='https://www.facebook.com/HeyHeyBarandGrill/'> The Hey Hey</a>
+                    </div>
                     <div>
                         Every Sunday, 2PM - 10PM 
                     </div>
@@ -60,7 +62,9 @@ const About = (props) => {
                 </div>
                 <hr style={{width: '70%'}} />
                 <div className={styles.aboutPanelSection}>
-                    <div>Brewstirs of Beechwold</div>
+                    <div>
+                        <a href='https://www.facebook.com/pages/category/Bar/Brewstirs-Beechwold-Tavern-112882397218391/' >Brewstirs of Beechwold</a>
+                    </div>
                     <div>
                         Every day, Noon - 10PM
                     </div>
@@ -70,7 +74,9 @@ const About = (props) => {
                 </div>
                 <hr style={{width: '70%'}} />
                 <div className={styles.aboutPanelSection}>
-                    <div>Leipzig Haus</div>
+                    <div>
+                        <a href='https://www.facebook.com/TheZigHaus/' >Leipzig Haus</a>
+                    </div>
                     <div>
                         Thursday - Saturday, Noon - 10PM
                     </div>

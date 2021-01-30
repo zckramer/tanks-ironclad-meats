@@ -247,43 +247,24 @@ function App() {
     return (
         <div className={styles.app}>
             <div className={styles.body}>
-            <MediaQuery query='(min-device-width: 1224px)'>
-                <Header 
-                    navClick={(e)=>handleNavClick(e)}
-                />
-                {!isShowMenu ? 
-                    <About /> : <Menu />
-                }
-                <div>You are a desktop or laptop</div>
-            </MediaQuery>
-            <MediaQuery query='(max-device-width: 1224px)'>
-                <HeaderMobile 
-                    navClick={(e)=>handleNavClick(e)}
-                />
-                {!isShowMenu ? 
-                    <AboutMobile /> : <MenuMobile />
-                }
-                {/* <div>You are a tablet or mobile phone</div> */}
-            </MediaQuery>
-        </div>
-
-            {/* {!isMobileView ? ( */}
-                {/* <MediaQuery query='(min-device-width: 1224px)'> */}
-                    {/* <div className={styles.body}> */}
-                        {/* Desktop styled component goes here */}
-                        {/* <Header  */}
-                            {/* navClick={(e)=>handleNavClick(e)} */}
-                        {/* /> */}
-                    {/* </div> */}
-                {/* </MediaQuery>) */}
-            {/* : */}
-                {/* <MediaQuery query='(max-device-width: 1224px)'> */}
-                    {/* Mobile styled component goes here */}
-                    {/* <HeaderMobile */}
-                        {/* navClick={(e)=>handleNavClick(e)} */}
-                    {/* /> */}
-                {/* </MediaQuery> */}
-            {/* } */}
+                <MediaQuery query='(min-device-width: 1224px)'>
+                    <Header 
+                        navClick={(e)=>handleNavClick(e)}
+                    />
+                    {!isShowMenu ? 
+                        <About /> : <Menu />
+                    }
+                </MediaQuery>
+                <MediaQuery query='(max-device-width: 1224px)'>
+                    <HeaderMobile 
+                        navClick={(e)=>handleNavClick(e)}
+                    />
+                    {!isShowMenu ? 
+                        <AboutMobile /> : <MenuMobile />
+                    }
+                    {/* <div>You are a tablet or mobile phone</div> */}
+                </MediaQuery>
+            </div>
         </div>
             
   );
