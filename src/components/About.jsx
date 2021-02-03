@@ -54,7 +54,7 @@ const About = () => {
                         <a href='https://www.facebook.com/HeyHeyBarandGrill/'> The Hey Hey</a>
                     </div>
                     <div>
-                        Every Sunday, 2PM - 10PM 
+                        Every Sunday, 2PM - 11PM 
                     </div>
                     <div>
                         361 E Whittier St, Columbus, OH 43206
@@ -66,7 +66,7 @@ const About = () => {
                         <a href='https://www.facebook.com/pages/category/Bar/Brewstirs-Beechwold-Tavern-112882397218391/' >Brewstirs of Beechwold</a>
                     </div>
                     <div>
-                        Every day, Noon - 10PM
+                        Every day, Noon - 11PM
                     </div>
                     <div>
                     4955 Arbor Village Drive, Columbus, Ohio 43215
@@ -78,7 +78,7 @@ const About = () => {
                         <a href='https://www.facebook.com/TheZigHaus/' >Leipzig Haus</a>
                     </div>
                     <div>
-                        Thursday - Saturday, Noon - 10PM
+                        Thursday - Saturday, Noon - 11PM
                     </div>
                     <div>
                         2201 East Livingston Ave, Columbus, Ohio 43209
