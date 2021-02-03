@@ -20,8 +20,11 @@ const useStyles = createUseStyles({
         width: '100vw',
         height: '100vh',      
         backgroundImage: `url(${MeatImg1})`, 
-        backgroundSize: 'fill', 
-        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed', 
+        backgroundPosition: '0 0',
+        backgroundRepeat: 'repeat',
+        backgroundSize: 'stretch',
+        
     },
     body: {
         display: 'flex',

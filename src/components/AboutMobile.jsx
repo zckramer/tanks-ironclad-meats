@@ -1,6 +1,14 @@
 import { createUseStyles } from 'react-jss';
 import MediaQuery from 'react-responsive';
 
+const useParentStyle = createUseStyles({
+    parent: {
+        position: 'fixed',
+        top: 50,
+        overflow: 'scroll',
+    }
+})
+
 const useStylesPortrait = createUseStyles({
     about: {
         display: 'flex',
@@ -8,7 +16,6 @@ const useStylesPortrait = createUseStyles({
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-        paddingTop: 55
     },
     aboutPanel: {
         display: 'flex',
@@ -34,11 +41,11 @@ const useStylesPortrait = createUseStyles({
 const useStylesLandscape = createUseStyles({
     about: {
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-        paddingTop: 60
+        height: '100%',
     },
     aboutPanel: {
         display: 'flex',
@@ -51,7 +58,6 @@ const useStylesLandscape = createUseStyles({
         margin: 4,
         padding: 2,
         width: '90%',
-        overflow: 'scrollY'
     },
     aboutPanelHeader: {
         scale: 1.3
@@ -64,9 +70,10 @@ const useStylesLandscape = createUseStyles({
 const About = () => {
     const stylesPortrait = useStylesPortrait();
     const stylesLandscape = useStylesLandscape();
+    const stylesParent = useParentStyle();
 
     return (
-        <div>
+        <div className={stylesParent.parent}>
             <MediaQuery query='(orientation: portrait)'>
                 <div className={stylesPortrait.about}>
                     <div className={stylesPortrait.aboutPanel}>
@@ -124,7 +131,7 @@ const About = () => {
             </MediaQuery>
             <MediaQuery query='(orientation: landscape)'>
             <div className={stylesLandscape.about}>
-                    <div className={stylesLandscape.aboutPanel}>
+                    <div className={stylesLandscape.aboutPanel} style={{ width: '40%', padding: 10 }} >
                         <div className={stylesLandscape.aboutPanelHeader}>
                             Jeff "Tank" Harkleroad
                         </div>
@@ -135,7 +142,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={stylesLandscape.aboutPanel}>
+                    <div className={stylesLandscape.aboutPanel} style={{width: '60%'}} >
                         <div className={stylesLandscape.aboutPanelHeader}>
                             Where you can find us: 
                         </div>
