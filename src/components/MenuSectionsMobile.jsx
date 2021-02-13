@@ -1,6 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import MediaQuery from 'react-responsive';
+
+import comingSoon from '../images/comingSoon.png'
 
 const useStylesLandscape = createUseStyles({
     menu: {
@@ -90,39 +92,39 @@ const MenuSections = () => {
     const stylesLandscape = useStylesLandscape();
     const stylesPortrait = useStylesPortrait();
 
-    const [sections, setSections] = useState([
-        'http://placekitten.com/1200/1200',
-        'http://placekitten.com/800/800',
-        'http://placekitten.com/600/600'
-    ])
+    // const [sections, setSections] = useState([
+    //     'http://placekitten.com/1200/1200',
+    //     'http://placekitten.com/800/800',
+    //     'http://placekitten.com/600/600'
+    // ])
 
-    const [sectionToShow, setSectionToShow] = useState(sections[0]);
+    // const [sectionToShow, setSectionToShow] = useState(sections[0]);
 
-    function handleChangePage (section) {
-        setSectionToShow(sections[section])
-    }
+    // function handleChangePage (section) {
+    //     setSectionToShow(sections[section])
+    // }
 
     return (
         <div>
             <MediaQuery query='(orientation: portrait)'>
             <div className={stylesPortrait.menu}>
-                    <img className={stylesPortrait.theMenu} src={sectionToShow} />
-                    <div className={stylesPortrait.menuButtonContainer}>
-                        <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(0)} >Platters</div>
-                        <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(1)} >A La Carte</div>
-                        <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(2)} >Sides</div>
-                    </div>
+                    <img className={stylesPortrait.theMenu} src={comingSoon} />
+                    {/* <div className={stylesPortrait.menuButtonContainer}> */}
+                        {/* <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(0)} >Platters</div> */}
+                        {/* <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(1)} >A La Carte</div> */}
+                        {/* <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(2)} >Sides</div> */}
+                    {/* </div> */}
                 </div>
             </MediaQuery>
 
             <MediaQuery query='(orientation: landscape)'>
                 <div className={stylesLandscape.menu}>
-                    <img className={stylesLandscape.theMenu} src={sectionToShow} />
-                    <div className={stylesLandscape.menuButtonContainer}>
+                    <img className={stylesLandscape.theMenu} src={comingSoon} />
+                    {/* <div className={stylesLandscape.menuButtonContainer}>
                         <div className={stylesLandscape.menuButton} onClick={()=>handleChangePage(0)} >Platters</div>
                         <div className={stylesLandscape.menuButton} onClick={()=>handleChangePage(1)} >A La Carte</div>
                         <div className={stylesLandscape.menuButton} onClick={()=>handleChangePage(2)} >Sides</div>
-                    </div>
+                    </div> */}
                 </div>
                 </MediaQuery>
         </div>

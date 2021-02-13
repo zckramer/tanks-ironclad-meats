@@ -35,7 +35,9 @@ const useStyles = createUseStyles({
         margin: 0,
     },
     footer: {
-        position: 'fixed bottom'
+        position: 'fixed',
+        bottom: 0,
+        textAlign: 'center'
     },
     menu: {
         display: 'flex',
@@ -274,10 +276,12 @@ function App() {
                     textDecoration:'none', 
                     color:'inherit', 
                     backgroundColor:'#282c34DD', 
-                    padding:'3px', 
+                    padding:'3px!important', 
                     borderRadius:'6px', 
-                    fontWeight:'bold'
-                }}>Zack Kramer</a>
+                    fontWeight:'bold',
+                }}
+                target='_blank'
+                >Zack Kramer</a>
             </p>
             </div>
         </div>

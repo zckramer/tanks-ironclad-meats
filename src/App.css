@@ -11,12 +11,9 @@ a {
   text-decoration: underline;
   color: inherit;
   font-weight: bold;
-  transition: cubic-bezier(1, 0, 0, 1);
+  
 }
 
-a :hover {
-  scale: 1.2;
-}
 /* .App {
   color: #FFFFF7;
   width: 100vw;
