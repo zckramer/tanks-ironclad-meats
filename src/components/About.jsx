@@ -13,7 +13,7 @@ const useStyles = createUseStyles({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#282c348a',
+        backgroundColor: '#282c34DD',
         border: '2px solid darkslategray',
         borderRadius: '8px',
         margin: 8,
@@ -54,7 +54,7 @@ const About = () => {
                         <a href='https://www.facebook.com/HeyHeyBarandGrill/'> The Hey Hey</a>
                     </div>
                     <div>
-                        Every Sunday, 2PM - 11PM 
+                        Every Sunday, 4PM - 12AM 
                     </div>
                     <div>
                         361 E Whittier St, Columbus, OH 43206
@@ -78,7 +78,7 @@ const About = () => {
                         <a href='https://www.facebook.com/TheZigHaus/' >Leipzig Haus</a>
                     </div>
                     <div>
-                        Thursday - Saturday, Noon - 11PM
+                        Thursday - Saturday, 5PM - 12AM
                     </div>
                     <div>
                         2201 East Livingston Ave, Columbus, Ohio 43209

@@ -96,7 +96,7 @@ const About = () => {
                                 <a href='https://www.facebook.com/HeyHeyBarandGrill/'> The Hey Hey</a>
                             </div>
                             <div>
-                                Every Sunday, 2PM - 11PM 
+                                Every Sunday, 4PM - 12AM 
                             </div>
                             <div>
                                 361 E Whittier St, Columbus, OH 43206
@@ -120,7 +120,7 @@ const About = () => {
                                 <a href='https://www.facebook.com/TheZigHaus/' >Leipzig Haus</a>
                             </div>
                             <div>
-                                Thursday - Saturday, Noon - 11PM
+                                Thursday - Saturday, 5PM - 12AM
                             </div>
                             <div>
                                 2201 East Livingston Ave, Columbus, Ohio 43209
@@ -151,7 +151,7 @@ const About = () => {
                                 <a href='https://www.facebook.com/HeyHeyBarandGrill/'> The Hey Hey</a>
                             </div>
                             <div>
-                                Every Sunday, 2PM - 11PM 
+                                Every Sunday, 4PM - 12AM 
                             </div>
                             <div>
                                 361 E Whittier St, Columbus, OH 43206
@@ -175,7 +175,7 @@ const About = () => {
                                 <a href='https://www.facebook.com/TheZigHaus/' >Leipzig Haus</a>
                             </div>
                             <div>
-                                Thursday - Saturday, Noon - 11PM
+                                Thursday - Saturday, 5PM - 12AM
                             </div>
                             <div>
                                 2201 East Livingston Ave, Columbus, Ohio 43209

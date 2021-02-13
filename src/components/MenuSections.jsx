@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 
+import comingSoon from '../images/comingSoon.png'
+
 const useStyles = createUseStyles({
     menu: {
         display: 'flex',
@@ -45,25 +47,25 @@ const useStyles = createUseStyles({
 
 const MenuSections = () => {
     const styles = useStyles();
-    const [sections, setSections] = useState([
-        'http://placekitten.com/800/800',
-        'http://placekitten.com/800/800',
-        'http://placekitten.com/800/800'
-    ])
+    // const [sections, setSections] = useState([
+    //     'http://placekitten.com/800/800',
+    //     'http://placekitten.com/800/800',
+    //     'http://placekitten.com/800/800'
+    // ])
 
-    const [sectionToShow, setSectionToShow] = useState(sections[0]);
+    // const [sectionToShow, setSectionToShow] = useState(sections[0]);
 
-    function handleChangePage (section) {
-        setSectionToShow(sections[section])
-    }
+    // function handleChangePage (section) {
+    //     setSectionToShow(sections[section])
+    // }
 
     return (
         <div className={styles.menu}>
-            <img className={styles.theMenu} src={sectionToShow} style={{height: "80%", width: "80%", borderRadius:"16px"}}/>
+            <img className={styles.theMenu} src={comingSoon} style={{height: "80%", width: "80%", borderRadius:"16px"}}/>
             <div className={styles.menuButtonContainer}>
-                <div className={styles.menuButton} onClick={()=>handleChangePage(0)} >Platters</div>
-                <div className={styles.menuButton} onClick={()=>handleChangePage(1)} >A La Carte</div>
-                <div className={styles.menuButton} onClick={()=>handleChangePage(2)} >Sides and Sauces</div>
+                {/* <div className={styles.menuButton} onClick={()=>handleChangePage(0)} >Platters</div> */}
+                {/* <div className={styles.menuButton} onClick={()=>handleChangePage(1)} >A La Carte</div> */}
+                {/* <div className={styles.menuButton} onClick={()=>handleChangePage(2)} >Sides and Sauces</div> */}
             </div>
         </div>
     )

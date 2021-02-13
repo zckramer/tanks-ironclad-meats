@@ -34,6 +34,9 @@ const useStyles = createUseStyles({
         height: '95%',
         margin: 0,
     },
+    footer: {
+        position: 'fixed bottom'
+    },
     menu: {
         display: 'flex',
         flexDirection: 'row-reverse',
@@ -265,8 +268,17 @@ function App() {
                     {!isShowMenu ? 
                         <AboutMobile /> : <MenuMobile />
                     }
-                    {/* <div>You are a tablet or mobile phone</div> */}
                 </MediaQuery>
+            <p className={styles.footer}>Web Design/Development by <a href='https://www.github.com/zckramer' 
+                style={{
+                    textDecoration:'none', 
+                    color:'inherit', 
+                    backgroundColor:'#282c34DD', 
+                    padding:'3px', 
+                    borderRadius:'6px', 
+                    fontWeight:'bold'
+                }}>Zack Kramer</a>
+            </p>
             </div>
         </div>
             

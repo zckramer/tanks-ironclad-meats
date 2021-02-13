@@ -7,6 +7,16 @@ HTML {
   background-color: black;
 }
 
+a {
+  text-decoration: underline;
+  color: inherit;
+  font-weight: bold;
+  transition: cubic-bezier(1, 0, 0, 1);
+}
+
+a :hover {
+  scale: 1.2;
+}
 /* .App {
   color: #FFFFF7;
   width: 100vw;
@@ -107,12 +117,11 @@ HTML {
   height: 80vh;
 } */
 
-.MenuSections {
+/* .MenuSections {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  /* padding: 30px; */
   width: 100vw;
   height: 80vh;
 }
@@ -175,17 +184,17 @@ HTML {
   margin: 2px;
   height: 50%;
   width: 3rem;
-}
+} */
 
 /* #Tank-Logo {
   max-height: 100%;
   max-width: 60%;
 } */
 
-#Background-Image-01 {
+/* #Background-Image-01 {
   display: flex;
   position: sticky;
   top: 0;
   width: 100vw;
   z-index: -3;
-}
+} */
