@@ -93,7 +93,7 @@ const About = () => {
                         </div>
                         <div className={stylesPortrait.aboutPanelSection}>
                             <div>
-                                <a href='https://www.facebook.com/HeyHeyBarandGrill/' target='_blank'> The Hey Hey</a>
+                                <a href='https://www.facebook.com/HeyHeyBarandGrill/' target='_blank'> HeyHey Bar and Grill</a>
                             </div>
                             <div>
                                 Every Sunday, 4PM - 12AM 
@@ -105,7 +105,7 @@ const About = () => {
                         <hr style={{width: '70%'}} />
                         <div className={stylesPortrait.aboutPanelSection}>
                             <div>
-                                <a href='https://www.facebook.com/pages/category/Bar/Brewstirs-Beechwold-Tavern-112882397218391/' target='_blank'>Brewstirs of Beechwold</a>
+                                <a href='https://www.facebook.com/pages/category/Bar/Brewstirs-Beechwold-Tavern-112882397218391/' target='_blank'>Brewstirs Beechwold Tavern</a>
                             </div>
                             <div>
                                 Every day, Noon - 11PM
@@ -148,7 +148,7 @@ const About = () => {
                         </div>
                         <div className={stylesLandscape.aboutPanelSection}>
                             <div>
-                                <a href='https://www.facebook.com/HeyHeyBarandGrill/' target='_blank'> The Hey Hey</a>
+                                <a href='https://www.facebook.com/HeyHeyBarandGrill/' target='_blank'> HeyHey Bar and Grill</a>
                             </div>
                             <div>
                                 Every Sunday, 4PM - 12AM 
@@ -160,7 +160,7 @@ const About = () => {
                         <hr style={{width: '70%'}} />
                         <div className={stylesLandscape.aboutPanelSection}>
                             <div>
-                                <a href='https://www.facebook.com/TheZigHaus/' target='_blank'>Leipzig Haus</a>
+                                <a href='https://www.facebook.com/pages/category/Bar/Brewstirs-Beechwold-Tavern-112882397218391/' target='_blank'>Brewstirs Beechwold Tavern</a>
                             </div>
                             <div>
                                 Every day, Noon - 11PM
