@@ -262,15 +262,6 @@ function App() {
                     {!isShowMenu ? 
                         <About /> : <Menu />
                     }
-                </MediaQuery>
-                <MediaQuery query='(max-device-width: 1224px)'>
-                    <HeaderMobile 
-                        navClick={(e)=>handleNavClick(e)}
-                    />
-                    {!isShowMenu ? 
-                        <AboutMobile /> : <MenuMobile />
-                    }
-                </MediaQuery>
             <p className={styles.footer}>Web Design/Development by <a href='https://www.github.com/zckramer' 
                 style={{
                     textDecoration:'none', 
@@ -283,6 +274,15 @@ function App() {
                 target='_blank'
                 >Zack Kramer</a>
             </p>
+                </MediaQuery>
+                <MediaQuery query='(max-device-width: 1224px)'>
+                    <HeaderMobile 
+                        navClick={(e)=>handleNavClick(e)}
+                    />
+                    {!isShowMenu ? 
+                        <AboutMobile /> : <MenuMobile />
+                    }
+                </MediaQuery>
             </div>
         </div>
             

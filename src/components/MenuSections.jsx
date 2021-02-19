@@ -67,9 +67,9 @@ const MenuSections = () => {
         <div className={styles.menu}>
             <img className={styles.theMenu} src={sectionToShow} style={{height: "80%", width: "80%", borderRadius:"16px"}}/>
             <div className={styles.menuButtonContainer}>
-                <div className={styles.menuButton} onClick={()=>handleChangePage(0)} >Platters</div>
-                <div className={styles.menuButton} onClick={()=>handleChangePage(1)} >A La Carte</div>
-                <div className={styles.menuButton} onClick={()=>handleChangePage(2)} >Sides and Sauces</div>
+                <div className={styles.menuButton} onClick={()=>handleChangePage(0)} >1</div>
+                <div className={styles.menuButton} onClick={()=>handleChangePage(1)} >2</div>
+                <div className={styles.menuButton} onClick={()=>handleChangePage(2)} >3</div>
             </div>
         </div>
     )
