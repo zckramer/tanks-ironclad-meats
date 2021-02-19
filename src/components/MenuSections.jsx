@@ -1,7 +1,11 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 
-import comingSoon from '../images/comingSoon.png'
+// import comingSoon from '../images/comingSoon.png'
+import menu1 from '../images/TP_1.jpg';
+import menu2 from '../images/TP_2.jpg';
+import menu3 from '../images/TP_3.jpg';
+
 
 const useStyles = createUseStyles({
     menu: {
@@ -47,26 +51,26 @@ const useStyles = createUseStyles({
 
 const MenuSections = () => {
     const styles = useStyles();
-    // const [sections, setSections] = useState([
-    //     'http://placekitten.com/800/800',
-    //     'http://placekitten.com/800/800',
-    //     'http://placekitten.com/800/800'
-    // ])
+    const [sections] = useState([
+        menu1,
+        menu2,
+        menu3
+    ])
 
-    // const [sectionToShow, setSectionToShow] = useState(sections[0]);
+    const [sectionToShow, setSectionToShow] = useState(sections[0]);
 
-    // function handleChangePage (section) {
-    //     setSectionToShow(sections[section])
-    // }
+    function handleChangePage (section) {
+        setSectionToShow(sections[section])
+    }
 
     return (
         <div className={styles.menu}>
-            <img className={styles.theMenu} src={comingSoon} style={{height: "80%", width: "80%", borderRadius:"16px"}}/>
-            {/* <div className={styles.menuButtonContainer}>
+            <img className={styles.theMenu} src={sectionToShow} style={{height: "80%", width: "80%", borderRadius:"16px"}}/>
+            <div className={styles.menuButtonContainer}>
                 <div className={styles.menuButton} onClick={()=>handleChangePage(0)} >Platters</div>
                 <div className={styles.menuButton} onClick={()=>handleChangePage(1)} >A La Carte</div>
                 <div className={styles.menuButton} onClick={()=>handleChangePage(2)} >Sides and Sauces</div>
-            </div> */}
+            </div>
         </div>
     )
 }
