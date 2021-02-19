@@ -113,9 +113,9 @@ const MenuSections = () => {
             <div className={stylesPortrait.menu}>
                     <img className={stylesPortrait.theMenu} src={sectionToShow} />
                     <div className={stylesPortrait.menuButtonContainer}>
-                        <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(0)} >Platters</div>
-                        <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(1)} >A La Carte</div>
-                        <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(2)} >Sides</div>
+                        <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(0)} >1</div>
+                        <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(1)} >2</div>
+                        <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(2)} >3</div>
                     </div>
                 </div>
             </MediaQuery>
@@ -124,9 +124,9 @@ const MenuSections = () => {
                 <div className={stylesLandscape.menu}>
                     <img className={stylesLandscape.theMenu} src={sectionToShow} />
                     <div className={stylesLandscape.menuButtonContainer}>
-                        <div className={stylesLandscape.menuButton} onClick={()=>handleChangePage(0)} >Platters</div>
-                        <div className={stylesLandscape.menuButton} onClick={()=>handleChangePage(1)} >A La Carte</div>
-                        <div className={stylesLandscape.menuButton} onClick={()=>handleChangePage(2)} >Sides</div>
+                        <div className={stylesLandscape.menuButton} onClick={()=>handleChangePage(0)} >1</div>
+                        <div className={stylesLandscape.menuButton} onClick={()=>handleChangePage(1)} >2</div>
+                        <div className={stylesLandscape.menuButton} onClick={()=>handleChangePage(2)} >3</div>
                     </div>
                 </div>
                 </MediaQuery>
