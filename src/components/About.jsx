@@ -1,55 +1,55 @@
 import { createUseStyles } from 'react-jss';
 
-const useStyles = createUseStyles({
-    about: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-    },
-    aboutPanel: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#282c34DD',
-        border: '2px solid darkslategray',
-        borderRadius: '8px',
-        margin: 8,
-        padding: 4,
-        width: '70%',
-        overflow: 'scrollY'
-    },
-    aboutPanelHeader: {
-        scale: 1.3
-    },
-    aboutPanelSection: {
-        margin: '1rem',
+// const useStyles = createUseStyles({
+//     about: {
+//         display: 'flex',
+//         flexDirection: 'column',
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         width: '100%',
+//     },
+//     aboutPanel: {
+//         display: 'flex',
+//         flexDirection: 'column',
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         backgroundColor: '#282c34DD',
+//         border: '2px solid darkslategray',
+//         borderRadius: '8px',
+//         margin: 8,
+//         padding: 4,
+//         width: '70%',
+//         overflow: 'scrollY'
+//     },
+//     aboutPanelHeader: {
+//         scale: 1.3
+//     },
+//     aboutPanelSection: {
+//         margin: '1rem',
 
-    }
-})
+//     }
+// })
 
 const About = () => {
-    const styles = useStyles();
+    // const styles = useStyles();
     return (
-        <div className={styles.about}>
-            <div className={styles.aboutPanel}>
-                <div className={styles.aboutPanelHeader}>
+        <div className='About'>
+            <div className='About__Panel'>
+                <div className='About__Panel-Header'>
                     Jeff "Tank" Harkleroad
                 </div>
-                <div className={styles.aboutPanelSection}>
+                <div className='About__Panel-Section'>
                     <div>
                         Serving Columbus and central Ohio, we make smoked and 
                         slow-cooked meats and comfort cuisine.
                     </div>
                 </div>
             </div>
-            <div className={styles.aboutPanel}>
-                <div className={styles.aboutPanelHeader}>
+            <div className='About__Panel'>
+                <div className='About__Panel-Header'>
                     Where you can find us: 
                 </div>
-                <div className={styles.aboutPanelSection}>
+                <div className='About__Panel-Section'>
                     <div>
                         <a href='https://www.facebook.com/HeyHeyBarandGrill/' target='_blank'> HeyHey Bar and Grill</a>
                     </div>
@@ -61,7 +61,7 @@ const About = () => {
                     </div>
                 </div>
                 <hr style={{width: '70%'}} />
-                <div className={styles.aboutPanelSection}>
+                <div className='About__Panel-Section'>
                     <div>
                         <a href='https://www.facebook.com/pages/category/Bar/Brewstirs-Beechwold-Tavern-112882397218391/' target='_blank'>Brewstirs Beechwold Tavern</a>
                     </div>
@@ -73,7 +73,7 @@ const About = () => {
                     </div>
                 </div>
                 <hr style={{width: '70%'}} />
-                <div className={styles.aboutPanelSection}>
+                <div className='About__Panel-Section'>
                     <div>
                         <a href='https://www.facebook.com/TheZigHaus/' target='_blank'>Leipzig Haus</a>
                     </div>

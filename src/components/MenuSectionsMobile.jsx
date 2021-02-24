@@ -111,7 +111,7 @@ const MenuSections = () => {
         <div>
             <MediaQuery query='(orientation: portrait)'>
             <div className={stylesPortrait.menu}>
-                    <img className={stylesPortrait.theMenu} src={sectionToShow} />
+                    <img className={stylesPortrait.theMenu} src={sectionToShow} alt='the food menu' />
                     <div className={stylesPortrait.menuButtonContainer}>
                         <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(0)} >1</div>
                         <div className={stylesPortrait.menuButton} onClick={()=>handleChangePage(1)} >2</div>
@@ -122,7 +122,7 @@ const MenuSections = () => {
 
             <MediaQuery query='(orientation: landscape)'>
                 <div className={stylesLandscape.menu}>
-                    <img className={stylesLandscape.theMenu} src={sectionToShow} />
+                    <img className={stylesLandscape.theMenu} src={sectionToShow} alt='the food menu' />
                     <div className={stylesLandscape.menuButtonContainer}>
                         <div className={stylesLandscape.menuButton} onClick={()=>handleChangePage(0)} >1</div>
                         <div className={stylesLandscape.menuButton} onClick={()=>handleChangePage(1)} >2</div>

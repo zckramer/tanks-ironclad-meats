@@ -253,8 +253,8 @@ function App() {
     }
     
     return (
-        <div className={styles.app}>
-            <div className={styles.body}>
+        <div className='App'>
+            <div className='Body'>
                 <MediaQuery query='(min-device-width: 1224px)'>
                     <Header 
                         navClick={(e)=>handleNavClick(e)}
@@ -262,7 +262,7 @@ function App() {
                     {!isShowMenu ? 
                         <About /> : <Menu />
                     }
-            <p className={styles.footer}>Web Design/Development by <a href='https://www.github.com/zckramer' 
+            <p className='footer' >Web Design/Development by <a href='https://www.github.com/zckramer' 
                 style={{
                     textDecoration:'none', 
                     color:'inherit', 
