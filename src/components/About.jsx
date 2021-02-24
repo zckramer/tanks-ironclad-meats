@@ -1,37 +1,5 @@
-import { createUseStyles } from 'react-jss';
-
-// const useStyles = createUseStyles({
-//     about: {
-//         display: 'flex',
-//         flexDirection: 'column',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         width: '100%',
-//     },
-//     aboutPanel: {
-//         display: 'flex',
-//         flexDirection: 'column',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         backgroundColor: '#282c34DD',
-//         border: '2px solid darkslategray',
-//         borderRadius: '8px',
-//         margin: 8,
-//         padding: 4,
-//         width: '70%',
-//         overflow: 'scrollY'
-//     },
-//     aboutPanelHeader: {
-//         scale: 1.3
-//     },
-//     aboutPanelSection: {
-//         margin: '1rem',
-
-//     }
-// })
 
 const About = () => {
-    // const styles = useStyles();
     return (
         <div className='About'>
             <div className='About__Panel'>
@@ -60,7 +28,6 @@ const About = () => {
                         361 E Whittier St, Columbus, OH 43206
                     </div>
                 </div>
-                {/* <hr style={{width: '70%'}} /> */}
                 <div className='About__Panel-Section'>
                     <div>
                         <a href='https://www.facebook.com/pages/category/Bar/Brewstirs-Beechwold-Tavern-112882397218391/' target='_blank'>Brewstirs Beechwold Tavern</a>
@@ -72,7 +39,6 @@ const About = () => {
                         4955 Arbor Village Drive, Columbus, Ohio 43215
                     </div>
                 </div>
-                {/* <hr style={{width: '70%'}} /> */}
                 <div className='About__Panel-Section'>
                     <div>
                         <a href='https://www.facebook.com/TheZigHaus/' target='_blank'>Leipzig Haus</a>
