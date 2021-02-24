@@ -29,8 +29,7 @@ function App() {
                 <Header 
                     navClick={(e)=>handleNavClick(e)}
                 />
-                <About />
-                {/* <Menu /> */}
+                {isShowMenu ? <Menu /> : <About />}
                 <p className='Footer' >Web Design/Development by  
                     <a href='https://www.github.com/zckramer' 
                         style={{
