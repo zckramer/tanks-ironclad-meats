@@ -60,7 +60,7 @@ const About = () => {
                         361 E Whittier St, Columbus, OH 43206
                     </div>
                 </div>
-                <hr style={{width: '70%'}} />
+                {/* <hr style={{width: '70%'}} /> */}
                 <div className='About__Panel-Section'>
                     <div>
                         <a href='https://www.facebook.com/pages/category/Bar/Brewstirs-Beechwold-Tavern-112882397218391/' target='_blank'>Brewstirs Beechwold Tavern</a>
@@ -69,10 +69,10 @@ const About = () => {
                         Every day, Noon - 11PM
                     </div>
                     <div>
-                    4955 Arbor Village Drive, Columbus, Ohio 43215
+                        4955 Arbor Village Drive, Columbus, Ohio 43215
                     </div>
                 </div>
-                <hr style={{width: '70%'}} />
+                {/* <hr style={{width: '70%'}} /> */}
                 <div className='About__Panel-Section'>
                     <div>
                         <a href='https://www.facebook.com/TheZigHaus/' target='_blank'>Leipzig Haus</a>

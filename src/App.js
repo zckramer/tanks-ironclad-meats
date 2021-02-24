@@ -14,61 +14,61 @@ import MenuMobile from './components/MenuSectionsMobile';
 
 import MeatImg1 from './images/meat01.jpg';
 
-const useStyles = createUseStyles({
-    app: {
-        color: '#FFFFF7',
-        width: '100vw',
-        height: '100vh',      
-        backgroundImage: `url(${MeatImg1})`, 
-        backgroundAttachment: 'fixed', 
-        backgroundPosition: '0 0',
-        backgroundRepeat: 'repeat',
-        backgroundSize: 'stretch',
+// const useStyles = createUseStyles({
+//     app: {
+//         color: '#FFFFF7',
+//         width: '100vw',
+//         height: '100vh',      
+//         backgroundImage: `url(${MeatImg1})`, 
+//         backgroundAttachment: 'fixed', 
+//         backgroundPosition: '0 0',
+//         backgroundRepeat: 'repeat',
+//         backgroundSize: 'stretch',
         
-    },
-    body: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '95%',
-        margin: 0,
-    },
-    footer: {
-        position: 'fixed',
-        bottom: 0,
-        textAlign: 'center'
-    },
-    menu: {
-        display: 'flex',
-        flexDirection: 'row-reverse',
-        alignItems: 'center',
-        height: '100vh',
-        marginTop: 100,
-    },
-    menuButtonContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        height: '100%'
-    },
-    menuButton: {
-        display: 'flex',
-        color: '#000000',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'whitesmoke',
-        border: '3px solid whitesmoke',
-        borderRadius: '8px',
-        userSelect: 'none',
-        cursor: 'pointer',
-        margin: '2px',
-        width: '3rem',
-        height: '20%'
-    }
-});
+//     },
+//     body: {
+//         display: 'flex',
+//         flexDirection: 'column',
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         height: '95%',
+//         margin: 0,
+//     },
+//     footer: {
+//         position: 'fixed',
+//         bottom: 0,
+//         textAlign: 'center'
+//     },
+//     menu: {
+//         display: 'flex',
+//         flexDirection: 'row-reverse',
+//         alignItems: 'center',
+//         height: '100vh',
+//         marginTop: 100,
+//     },
+//     menuButtonContainer: {
+//         display: 'flex',
+//         flexDirection: 'column',
+//         alignItems: 'center',
+//         justifyContent: 'center',
+//         width: '100%',
+//         height: '100%'
+//     },
+//     menuButton: {
+//         display: 'flex',
+//         color: '#000000',
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         backgroundColor: 'whitesmoke',
+//         border: '3px solid whitesmoke',
+//         borderRadius: '8px',
+//         userSelect: 'none',
+//         cursor: 'pointer',
+//         margin: '2px',
+//         width: '3rem',
+//         height: '20%'
+//     }
+// });
 
 // const useMobileStylesPortrait = createUseStyles({
 //     app: {
@@ -243,7 +243,7 @@ const useStyles = createUseStyles({
 
 function App() {
     const [isShowMenu, setIsShowMenu] = useState(false);
-    const styles = useStyles();
+    // const styles = useStyles();
     
     function handleNavClick (target) {
         if (target === "MENU") {
@@ -255,7 +255,13 @@ function App() {
     return (
         <div className='App'>
             <div className='Body'>
-                <MediaQuery query='(min-device-width: 1224px)'>
+                <span className='HeaderBlock' />
+                <Header 
+                    navClick={(e)=>handleNavClick(e)}
+                />
+                <About />
+                {/* <Menu /> */}
+                {/* <MediaQuery query='(min-device-width: 1224px)'>
                     <Header 
                         navClick={(e)=>handleNavClick(e)}
                     />
@@ -282,7 +288,7 @@ function App() {
                     {!isShowMenu ? 
                         <AboutMobile /> : <MenuMobile />
                     }
-                </MediaQuery>
+                </MediaQuery> */}
             </div>
         </div>
             
