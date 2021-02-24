@@ -2,15 +2,11 @@
 
 import './App.css';
 import { useState } from 'react';
-import { createUseStyles } from 'react-jss';
-import MediaQuery from 'react-responsive';
 
+// Do NOT use 'Mobile' named components. Media queries are done in CSS now.
 import Header from './components/Header';
-import HeaderMobile from './components/HeaderMobile';
 import About from './components/About';
-import AboutMobile from './components/AboutMobile';
 import Menu from './components/MenuSections';
-import MenuMobile from './components/MenuSectionsMobile';
 
 function App() {
     const [isShowMenu, setIsShowMenu] = useState(false);
