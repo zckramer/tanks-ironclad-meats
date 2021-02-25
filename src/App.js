@@ -21,13 +21,15 @@ function App() {
     return (
         <div className='App'>
             <div className='Body'>
-                <span className='HeaderBlock' />
+                <div className='HeaderBlock' />
                 <Header 
                     navClick={(e)=>handleNavClick(e)}
                 />
                 {isShowMenu ? <Menu /> : <About />}
                 <p className='Footer' >Web Design/Development by  
                     <a href='https://www.github.com/zckramer' 
+                        rel='noreferrer'
+                        target='_blank'
                         style={{
                             textDecoration:'none', 
                             color:'inherit', 
@@ -37,11 +39,11 @@ function App() {
                             borderRadius:'6px', 
                             fontWeight:'bold',
                         }}
-                            target='_blank'
                         > Zack Kramer 
                     </a>
                 </p>
             </div>
+            <div className='FooterBlock' />
         </div>
   );
 }

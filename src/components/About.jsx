@@ -22,7 +22,7 @@ const About = () => {
                         <a href='https://www.facebook.com/HeyHeyBarandGrill/' target='_blank'> HeyHey Bar and Grill</a>
                     </div>
                     <div>
-                        Every Sunday, 4PM - 12AM 
+                        Every Sunday, 4:30PM - 12AM 
                     </div>
                     <div>
                         361 E Whittier St, Columbus, OH 43206
