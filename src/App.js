@@ -34,7 +34,7 @@ function App() {
                             textDecoration:'none', 
                             color:'inherit', 
                             backgroundColor:'#282c34DD', 
-                            padding:'4px!important',
+                            // padding:'4px!important',
                             margin: '4px', 
                             borderRadius:'6px', 
                             fontWeight:'bold',
