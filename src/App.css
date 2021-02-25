@@ -175,19 +175,19 @@ a {
     justify-content: center;
     align-items: center;
     height: 95%;
-  }
-  .Footer{
-    user-select: none;
-    visibility: hidden;
-    position: fixed;
-  }
-  .FooterBlock{
-    height: 20px;
-  }
-  .HeaderBlock{
-    height: 40px;
-  }
-  .Header{
+    }
+    .Footer{
+      user-select: none;
+      visibility: hidden;
+      position: fixed;
+    }
+    .FooterBlock{
+      height: 20px;
+    }
+    .HeaderBlock{
+      height: 40px;
+    }
+    .Header{
       color: black;
       display: flex;
       flex-direction: row-reverse;
@@ -294,7 +294,8 @@ a {
       visibility: hidden;
     }
     .FooterBlock{
-      height: 20px;
+      /* height: 20px; */
+      visibility: hidden;
     }
     .HeaderBlock{
       height: 40px;

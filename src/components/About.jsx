@@ -19,7 +19,7 @@ const About = () => {
                 </div>
                 <div className='About__Panel-Section'>
                     <div>
-                        <a href='https://www.facebook.com/HeyHeyBarandGrill/' target='_blank'> HeyHey Bar and Grill</a>
+                        <a href='https://www.facebook.com/HeyHeyBarandGrill/' rel="noreferrer" target='_blank'> HeyHey Bar and Grill</a>
                     </div>
                     <div>
                         Every Sunday, 4:30PM - 12AM 
@@ -30,7 +30,7 @@ const About = () => {
                 </div>
                 <div className='About__Panel-Section'>
                     <div>
-                        <a href='https://www.facebook.com/pages/category/Bar/Brewstirs-Beechwold-Tavern-112882397218391/' target='_blank'>Brewstirs Beechwold Tavern</a>
+                        <a href='https://www.facebook.com/pages/category/Bar/Brewstirs-Beechwold-Tavern-112882397218391/'  rel="noreferrer" target='_blank'>Brewstirs Beechwold Tavern</a>
                     </div>
                     <div>
                         Every day, Noon - 11PM
@@ -41,7 +41,7 @@ const About = () => {
                 </div>
                 <div className='About__Panel-Section'>
                     <div>
-                        <a href='https://www.facebook.com/TheZigHaus/' target='_blank'>Leipzig Haus</a>
+                        <a href='https://www.facebook.com/TheZigHaus/' rel="noreferrer" target='_blank'>Leipzig Haus</a>
                     </div>
                     <div>
                         Thursday - Saturday, 5PM - 12AM
