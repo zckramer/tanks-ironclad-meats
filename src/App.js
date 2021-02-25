@@ -7,17 +7,23 @@ import { useState } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Menu from './components/MenuSections';
+import Modal from './components/Modal';
 
 function App() {
     const [isShowMenu, setIsShowMenu] = useState(false);
-    
+    const [showModal, setShowModal] = useState(false);
+
     function handleNavClick (target) {
         if (target === "MENU") {
             console.log(target);
             setIsShowMenu(true);
         } else setIsShowMenu(false);
     }
-    
+
+    function handleToggleModal () {
+        setShowModal(!showModal);
+    }
+
     return (
         <div className='App'>
             <div className='Body'>
@@ -25,7 +31,10 @@ function App() {
                 <Header 
                     navClick={(e)=>handleNavClick(e)}
                 />
-                {isShowMenu ? <Menu /> : <About />}
+                {showModal ? <Modal>SHABLAM!</Modal> : null
+                }
+                <button onClick={()=>handleToggleModal()} >SHOW MODAL</button>
+                {/* {isShowMenu ? <Menu /> : <About />} */}
                 <p className='Footer' >Web Design/Development by  
                     <a href='https://www.github.com/zckramer' 
                         rel='noreferrer'
@@ -34,7 +43,6 @@ function App() {
                             textDecoration:'none', 
                             color:'inherit', 
                             backgroundColor:'#282c34DD', 
-                            // padding:'4px!important',
                             margin: '4px', 
                             borderRadius:'6px', 
                             fontWeight:'bold',
@@ -45,7 +53,7 @@ function App() {
             </div>
             <div className='FooterBlock' />
         </div>
-  );
+    );
 }
 
 export default App;

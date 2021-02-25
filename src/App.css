@@ -214,8 +214,8 @@ a {
     }
     .Menu__theMenu{
       margin: 1rem;
-      height: 90%;
-      max-width: 100%;
+      max-height: 80%;
+      max-width: 90%;
     }
     .Menu__ButtonsContainer{
       display: flex;
