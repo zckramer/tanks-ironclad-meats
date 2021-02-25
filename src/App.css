@@ -87,7 +87,7 @@ a {
     transition: .1s;
   }
   .Header__Item:hover{
-    transform: scale(1.05)
+    transform: scale(1.05);
   }
   .Menu{
     display: flex;

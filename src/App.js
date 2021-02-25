@@ -7,17 +7,14 @@ import { useState } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Menu from './components/MenuSections';
-import Modal from './components/Modal';
+import Modal from './components/Modal/Modal';
 
 function App() {
     const [isShowMenu, setIsShowMenu] = useState(false);
     const [showModal, setShowModal] = useState(false);
 
-    function handleNavClick (target) {
-        if (target === "MENU") {
-            console.log(target);
-            setIsShowMenu(true);
-        } else setIsShowMenu(false);
+    function handleNavClick (e) {
+            console.log(e);
     }
 
     function handleToggleModal () {
@@ -29,11 +26,13 @@ function App() {
             <div className='Body'>
                 <div className='HeaderBlock' />
                 <Header 
-                    navClick={(e)=>handleNavClick(e)}
+                    // navClick={(e)=>handleNavClick(e)}
+                    onClick={(e)=>handleToggleModal(e)}
+                    showModal={showModal}
                 />
-                {showModal ? <Modal>SHABLAM!</Modal> : null
+                {showModal ? <Modal navClick={(e)=>handleNavClick(e)} /> : null
                 }
-                <button onClick={()=>handleToggleModal()} >SHOW MODAL</button>
+                {/* <button onClick={()=>handleToggleModal()} >SHOW MODAL</button> */}
                 {/* {isShowMenu ? <Menu /> : <About />} */}
                 <p className='Footer' >Web Design/Development by  
                     <a href='https://www.github.com/zckramer' 
