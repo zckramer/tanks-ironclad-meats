@@ -1,7 +1,10 @@
-// credits: Gonzalo Moldonado, article @ https://medium.com/@mustwin/responsive-react-9b56d63c4edc
-
 import './App.css';
 import { useState } from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from 'react-router-dom';
 
 // Do NOT use 'Mobile' named components. Media queries are done in CSS now.
 import Header from './components/Header';
@@ -10,8 +13,9 @@ import Menu from './components/MenuSections';
 import Modal from './components/Modal/Modal';
 
 function App() {
-    const [isShowMenu, setIsShowMenu] = useState(false);
+    // const [isShowMenu, setIsShowMenu] = useState(false);
     const [showModal, setShowModal] = useState(false);
+    const [currentPage, setCurrentPage] = useState()
 
     function handleNavClick (e) {
             console.log(e);
@@ -26,14 +30,25 @@ function App() {
             <div className='Body'>
                 <div className='HeaderBlock' />
                 <Header 
-                    // navClick={(e)=>handleNavClick(e)}
+                    navClick={(e)=>handleNavClick(e)}
                     onClick={(e)=>handleToggleModal(e)}
                     showModal={showModal}
                 />
-                {showModal ? <Modal navClick={(e)=>handleNavClick(e)} /> : null
+                {showModal ? 
+                    <Modal 
+                        navClick={(e)=>handleNavClick(e)} 
+                    /> : null
                 }
-                {/* <button onClick={()=>handleToggleModal()} >SHOW MODAL</button> */}
-                {/* {isShowMenu ? <Menu /> : <About />} */}
+                <Router>
+                    <Switch>
+                        <Route path='/'><About /></Route>
+                        <Route path='/about'><About /></Route>
+                        <Route path='/menu'><Menu /></Route>
+                        <Route path='/merch'><About /></Route>
+                        <Route path='/contact'><About /></Route>
+                    </Switch>
+                </Router>
+                {/* {currentPage} */}
                 <p className='Footer' >Web Design/Development by  
                     <a href='https://www.github.com/zckramer' 
                         rel='noreferrer'
