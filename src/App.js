@@ -1,9 +1,9 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
-    BrowserRouter as Router,
     Switch,
-    Route
+    Route,
+    useLocation
 } from 'react-router-dom';
 
 // Do NOT use 'Mobile' named components. Media queries are done in CSS now.
@@ -15,15 +15,27 @@ import Modal from './components/Modal/Modal';
 function App() {
     // const [isShowMenu, setIsShowMenu] = useState(false);
     const [showModal, setShowModal] = useState(false);
-    const [currentPage, setCurrentPage] = useState()
+    const [currentURL, setCurrentURL] = useState(useLocation())
+    
+    let location = useLocation();
 
     function handleNavClick (e) {
-            console.log(e);
+        console.log(e);
+        console.log(currentURL);
+        setCurrentURL(location);
     }
 
     function handleToggleModal () {
         setShowModal(!showModal);
     }
+
+    function useURLChange() {
+        let location = useLocation();
+        useEffect(() => {
+          setCurrentURL(location);
+        }, [location]);
+    }
+    useURLChange();
 
     return (
         <div className='App'>
@@ -36,10 +48,13 @@ function App() {
                 />
                 {showModal ? 
                     <Modal 
-                        navClick={(e)=>handleNavClick(e)} 
+                        navClick={(e)=>handleNavClick(e)}
+                        about={<About />}
+                        menu={<Menu />}
+                        merch={<About />}
+                        contact={<About />}
                     /> : null
                 }
-                <Router>
                     <Switch>
                         <Route path='/'><About /></Route>
                         <Route path='/about'><About /></Route>
@@ -47,8 +62,6 @@ function App() {
                         <Route path='/merch'><About /></Route>
                         <Route path='/contact'><About /></Route>
                     </Switch>
-                </Router>
-                {/* {currentPage} */}
                 <p className='Footer' >Web Design/Development by  
                     <a href='https://www.github.com/zckramer' 
                         rel='noreferrer'
