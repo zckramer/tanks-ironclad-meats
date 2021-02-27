@@ -13,7 +13,13 @@ a {
   font-weight: bold;
   cursor: pointer;
 }
-
+.ComingSoon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
 /* Desktop resolution */
 @media screen and (min-device-width: 1225px){
   .App{

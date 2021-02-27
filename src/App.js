@@ -14,6 +14,7 @@ import {
 import Header from './components/Header';
 import About from './components/About';
 import Menu from './components/MenuSections';
+import ComingSoon from './components/ComingSoon';
 import Modal from './components/Modal/Modal';
 
 function App() {
@@ -49,8 +50,8 @@ function App() {
                         <Switch>
                             <Route path='/about'><About /></Route>
                             <Route path='/menu'><Menu /></Route>
-                            <Route path='/merch'><About /></Route>
-                            <Route path='/contact'><About /></Route>
+                            <Route path='/merch'><ComingSoon /></Route>
+                            <Route path='/contact'><ComingSoon /></Route>
                             <Redirect to='/about' />
                         </Switch>
                     <p className='Footer' >Web Design/Development by  
