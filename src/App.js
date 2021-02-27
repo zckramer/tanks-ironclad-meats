@@ -1,14 +1,13 @@
 import './App.css';
 import { 
     useState, 
-    // useEffect 
 } from 'react';
+
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Redirect,
-    // useLocation
 } from 'react-router-dom';
 
 // Do NOT use 'Mobile' named components. Media queries are done in CSS now.
@@ -18,29 +17,15 @@ import Menu from './components/MenuSections';
 import Modal from './components/Modal/Modal';
 
 function App() {
-    // const [isShowMenu, setIsShowMenu] = useState(false);
     const [showModal, setShowModal] = useState(false);
-    // const [currentURL, setCurrentURL] = useState(useLocation())
-    
-    // let location = useLocation();
 
     function handleNavClick (e) {
         console.log(e);
-        // console.log(currentURL);
-        // setCurrentURL(location);
     }
 
     function handleToggleModal () {
         setShowModal(!showModal);
     }
-
-    // function useURLChange() {
-    //     let location = useLocation();
-    //     useEffect(() => {
-    //       setCurrentURL(location);
-    //     }, [location]);
-    // }
-    // useURLChange();
 
     return (
         <Router>
