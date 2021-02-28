@@ -14,6 +14,7 @@ import {
 import Header from './components/Header';
 import About from './components/About';
 import Menu from './components/MenuSections';
+import Contact from './components/Contact';
 import ComingSoon from './components/ComingSoon';
 import Modal from './components/Modal/Modal';
 
@@ -41,17 +42,13 @@ function App() {
                     {showModal ? 
                         <Modal 
                         navClick={(e)=>handleNavClick(e)}
-                        about={<About />}
-                        menu={<Menu />}
-                        merch={<About />}
-                        contact={<About />}
                         /> : null
                     }  
                         <Switch> 
                             <Route path='/about'><About /></Route>
                             <Route path='/menu'><Menu /></Route>
                             <Route path='/merch'><ComingSoon /></Route>
-                            <Route path='/contact'><ComingSoon /></Route>
+                            <Route path='/contact'><Contact /></Route>
                             <Redirect to='/about' />
                         </Switch>
                     <p className='Footer' >Web Design/Development by  
