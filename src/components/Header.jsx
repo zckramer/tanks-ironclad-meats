@@ -1,4 +1,6 @@
 import TankLogo from '../images/Logo_Tank.png';
+import HamburgerMenuIcon from '../images/Hamburger_icon_black.png';
+import CloseIcon from '../images/x_icon_black.png';
 
 const Header = (props) => {
     return (
@@ -8,9 +10,22 @@ const Header = (props) => {
                 alt="Tank Logo" 
                 // onClick={()=>props.navClick("ABOUT")}
             />
-            <div className='Header__Item' 
-                onClick={()=>props.onClick()} >{props.showModal ? 'CLOSE' : 'MENU'}
-            </div>
+            {props.showModal ? 
+                <img 
+                    src={CloseIcon}
+                    className='Header__Item' 
+                    alt='Close Navigation Menu'
+                    onClick={()=>props.closeModal()} 
+                />
+                    
+                :
+                <img 
+                    src={HamburgerMenuIcon} 
+                    className={'Header__Item'} 
+                    alt='Open Navigation Menu' 
+                    onClick={()=>props.closeModal()} 
+                />
+            }
         </div>
     )
 }

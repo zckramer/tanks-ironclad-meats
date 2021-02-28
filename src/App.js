@@ -20,14 +20,14 @@ import Modal from './components/Modal/Modal';
 function App() {
     const [showModal, setShowModal] = useState(false);
 
-    function handleNavClick (e) {
-        console.log(e);
+    function handleNavClick () {
+        handleToggleModal();
     }
 
     function handleToggleModal () {
         setShowModal(!showModal);
     }
-
+    
     return (
         <Router>
             <div className='App'>
@@ -35,9 +35,9 @@ function App() {
                     <div className='HeaderBlock' />
                     <Header 
                         navClick={(e)=>handleNavClick(e)}
-                        onClick={(e)=>handleToggleModal(e)}
+                        closeModal={(e)=>handleToggleModal(e)}
                         showModal={showModal}
-                        />
+                    />
                     {showModal ? 
                         <Modal 
                         navClick={(e)=>handleNavClick(e)}
@@ -46,8 +46,8 @@ function App() {
                         merch={<About />}
                         contact={<About />}
                         /> : null
-                    }
-                        <Switch>
+                    }  
+                        <Switch> 
                             <Route path='/about'><About /></Route>
                             <Route path='/menu'><Menu /></Route>
                             <Route path='/merch'><ComingSoon /></Route>
