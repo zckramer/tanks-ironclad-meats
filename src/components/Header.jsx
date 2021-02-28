@@ -8,7 +8,6 @@ const Header = (props) => {
             <img className='Header__Item' 
                 src={TankLogo} 
                 alt="Tank Logo" 
-                // onClick={()=>props.navClick("ABOUT")}
             />
             {props.showModal ? 
                 <img 
