@@ -1,12 +1,11 @@
 const Link = (props) => {
     return (
-        <a 
-            href={props.url} 
-            rel="noreferrer" 
-            target='_blank'
+        <div
+            className='Link'
+            onClick={()=>window.open(props.url)}
         >
             {props.text}
-        </a>
+        </div>
     )
 }
 export default Link;

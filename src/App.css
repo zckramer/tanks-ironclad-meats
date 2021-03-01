@@ -6,7 +6,6 @@
 HTML {
   background-color: black;
 }
-
 a {
   text-decoration: none;
   color: inherit;
@@ -20,7 +19,6 @@ a {
   height: 100%;
   width: 100%;
 }
-
 .Contact{
   display: flex;
   flex-direction: column;
@@ -74,6 +72,15 @@ a {
 .Contact__Social-Link:hover{
   transform: scale(1.2);
   cursor: pointer;
+}
+.Link{
+  cursor: pointer;
+  transition: .2s;
+  font-weight: bold;
+}
+.Link:hover{
+  transform: scale(1.05);
+  font-weight: bolder;
 }
 
 /* Desktop resolution */

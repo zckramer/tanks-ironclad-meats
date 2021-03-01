@@ -1,5 +1,6 @@
 import fbIcon from '../images/Facebook_icon.png';
 import instaIcon from '../images/Instagram_icon.png';
+import Link from './Link';
 
 const Contact = () => {
     return (
@@ -11,11 +12,11 @@ const Contact = () => {
                     </div>
                     <div className='Contact__Entry'>
                         <span>Phone: </span>
-                        <span>(614) 597-5433</span>
+                        <div>(614) 597-5433</div>
                     </div>
                     <div className='Contact__Entry'>
                         <span>email: </span>
-                        <span><a href='mailto: tanksmeats@gmail.com'>tanksmeats@gmail.com</a></span>
+                        <span><Link url='mailto: tanksmeats@gmail.com' text='tanksmeats@gmail.com' /></span>
                     </div>
                     <div className='Contact__Entry'>
                         <span>follow us on social media: </span>
