@@ -8,7 +8,7 @@ const Contact = () => {
             <div className='Contact__Panel'>
                 <div className='Contact__Panel-Section'>
                     <div className="Contact__Panel-Header">
-                        <span>Contact us!</span>
+                        Contact us!
                     </div>
                     <div className='Contact__Entry'>
                         <span>Phone: </span>
