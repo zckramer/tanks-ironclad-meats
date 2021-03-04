@@ -13,7 +13,8 @@ import {
 // Do NOT use 'Mobile' named components. Media queries are done in CSS now.
 import Header from './components/Header';
 import About from './components/About';
-import Menu from './components/MenuSections';
+// import Menu from './components/MenuSections'; // PDF menu
+import Menu from './components/MenuTyped'; // Typed Menu
 import Contact from './components/Contact';
 import ComingSoon from './components/ComingSoon';
 import Modal from './components/Modal/Modal';

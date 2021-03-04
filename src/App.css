@@ -194,14 +194,69 @@ a {
   }
   .Menu{
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 1rem;
+    position: fixed;
     height: 100%;
     z-index: 1;
   }
-  .Menu__theMenu{
+  .Menu__Header{
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: -1;
+  }
+  .Menu__Header-Item{
+    margin: .5rem;
+    background-color: burlywood;
+    padding: 8px;
+    border-radius: 8px;
+    transition: .2s;
+    cursor: pointer;
+  }
+  .Menu__Header-Item:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 2px 2px;
+  }
+  .Menu__Menu-Area{
+    position: fixed;
+    padding-top: 1rem;
+    top: 120px;
+    height: 100%;
+    width: 60%;
+  }
+  .Menu__Page{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+  }
+  .Menu__Subsection{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 1rem;
+  }
+  .Menu__Subsection-Header{
+    font-weight: bold;
+    font-size: 16pt;
+  }
+  .Menu__Section-Content{
+    font-size: 14pt;
+  }
+  .Menu__Item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14pt;
+    margin-top: .4rem;
+  }
+
+  /* .Menu__theMenu{
     margin: 1rem;
     max-height: 80%;
   }
@@ -230,7 +285,7 @@ a {
   }
   .Menu__Buttons:hover{
     transform: scale(1.05);
-  }
+  } */
 
   .ModalMenu{
     display: flex;
@@ -249,7 +304,7 @@ a {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    z-index: 1;
+    z-index: 4;
   }
   .ModalMenu__Item{
     transition: .2s;
