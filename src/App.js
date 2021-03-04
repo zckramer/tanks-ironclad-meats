@@ -32,6 +32,7 @@ function App() {
     return (
         <Router>
             <div className='App'>
+                <div className='Background' />
                 <div className='Body'>
                     <div className='HeaderBlock' />
                     <Header 
