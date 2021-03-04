@@ -19,7 +19,7 @@ const Contact = () => {
                         <span><Link url='mailto: tanksmeats@gmail.com' text='tanksmeats@gmail.com' /></span>
                     </div>
                     <div className='Contact__Entry'>
-                        <span>follow us on social media: </span>
+                        <span>Follow us on social media: </span>
                         <div className='Contact__Entry-Container'>
                         <img 
                             src={fbIcon} 
