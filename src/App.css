@@ -216,30 +216,32 @@ a {
     z-index: -1; */
   }
   .Menu__Header-Item{
-    margin: .5rem;
+    visibility: hidden;
+    /* margin: .5rem;
     background-color: burlywood;
     padding: 8px;
     border-radius: 8px;
     transition: .2s;
-    cursor: pointer;
+    cursor: pointer; */
   }
   .Menu__Header-Item:hover{
-    transform: scale(1.1);
-    box-shadow: 2px 2px 2px 2px;
+    /* transform: scale(1.1);
+    box-shadow: 2px 2px 2px 2px; */
   }
   .Menu__Menu-Area{
     position: fixed;
-    padding-top: 1rem;
-    top: 120px;
+    top: 80px;
+    left: 200px;
+    right: 200px;
     height: 100%;
-    width: 80%;
-  }
-  .Menu__Page{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    margin: 1rem;
+  }
+  .Menu__Page{
+    /* margin: 1rem; */
   }
   .Menu__Subsection{
     display: flex;
@@ -254,10 +256,6 @@ a {
   }
   .Menu__Section-Content{
     font-size: 12pt;
-  }
-  .Menu__Section-Description{
-    /* font-style: italic;
-    font-weight: lighter; */
   }
   .Menu__Item{
     display: flex;
@@ -274,7 +272,7 @@ a {
   .Menu__Note{
     margin-bottom: .5rem;
     font-style: italic;
-    font-weight: lighter;
+    /* font-weight: lighter; */
   }
 
   /* .Menu__theMenu{
@@ -520,7 +518,7 @@ a {
       flex-direction: column;
       max-width: 95%;
       min-width: 40%;
-      /* margin: .25rem; */
+      margin: .25rem;
     }
     .Menu__Subsection-Header{
       font-weight: bold;
@@ -537,14 +535,14 @@ a {
       margin-top: .1rem;
     }
     .Menu__Item-Note{
-      font-weight: lighter;
+      /* font-weight: lighter; */
       font-style: italic;
       font-size: 1rem;
     }
     .Menu__Note{
       margin-bottom: .5rem;
       font-style: italic;
-      font-weight: lighter;
+      /* font-weight: lighter; */
     }
     .ModalMenu{
       display: flex;
