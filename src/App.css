@@ -15,6 +15,9 @@ a {
   font-weight: bold;
   cursor: pointer;
 }
+.App{
+  color: #000000;
+}
 /* .Body{
   display: flex;
   justify-content: center;
@@ -341,14 +344,11 @@ a {
 
   /* Portrait orientation */
   @media (orientation: portrait){
-    *{
-      transition: ease-in;
-    }
     .App{
       background-image: url(./images/meat01.jpg);
       position: fixed;
       background-attachment: fixed;
-      color: #FFFFF7;
+      color: rgb(31, 31, 31);
       width: 100vw;
       height: 100vh;
       overflow-y: hidden;
@@ -370,11 +370,6 @@ a {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      /* background-color: #282C34DD; */
-      /* border: 2px solid darkslategray; */
-      /* border-radius: 8px; */
-      /* margin: 2px; */
-      /* padding: 1px; */
       width: 95%;
     }
     .About__Panel-Header{
@@ -395,7 +390,6 @@ a {
       z-index: 0;
       border-top: 4px solid black;
       border-bottom: 4px solid black;
-      /* transition: .2s; */
     }    
     .Body{
     display: flex;
@@ -414,15 +408,12 @@ a {
       max-width: 100%;
       font-size: 18pt;
       z-index: 1;
-      /* transition: .2s; */
     }
     .Contact__Panel{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      /* border: 2px solid darkslategray; */
-      /* border-radius: 8px; */
       margin: 8px;
       padding: 4px;
       width: 100%;
@@ -432,7 +423,6 @@ a {
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* margin: 1rem; */
     }
     .Contact__Panel-Header{
       transform: scale(1.3);
@@ -462,12 +452,9 @@ a {
       visibility: hidden;
       position: fixed;
     }
-    .FooterBlock{
-      /* height: 20px; */
-    }
-    .HeaderBlock{
+    /* .HeaderBlock{
       height: 40px;
-    }
+    } */
     .Header{
       color: black;
       display: flex;
@@ -487,40 +474,77 @@ a {
     }
     .Menu{
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      margin: 1rem;
-      height: 100%;
-      z-index: 4;
-    }
-    .Menu__theMenu{
-      margin: 1rem;
-      max-height: 80%;
-      max-width: 90%;
-    }
-    .Menu__ButtonsContainer{
-      display: flex;
       flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-      width: 100%;
-      height: 3%;
-    }
-    .Menu__Buttons{
-      display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid black;
-      border-radius: 8px;
-      user-select: none;
-      cursor: pointer;
-      margin: 2px;
-      padding: 4px;
-      background-color: whitesmoke;
-      color: #000000;
-      width: 100%;
+      padding: 1rem;
+      position: fixed;
       height: 100%;
+      z-index: 1;
+    }
+    .Menu__Header{
+      position: fixed;
+      top: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      z-index: 1;
+    }
+    .Menu__Header-Item{
+      margin: .25rem;
+      user-select: none;
+      background-color: burlywood;
+      padding: 8px;
+      border-radius: 8px;
+      transition: .2s;
+      box-shadow: black 2px 2px 2px 2px;
+    }
+    .Menu__Menu-Area{
+      position: fixed;
+      top: 120px;
+      left: 0px;
+      max-height: 100%;
+      max-width: 100%;
+      min-width: 90%;
+    }
+    .Menu__Page{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      /* margin: 1rem; */
+    }
+    .Menu__Subsection{
+      display: flex;
+      flex-direction: column;
+      max-width: 95%;
+      min-width: 40%;
+      /* margin: .25rem; */
+    }
+    .Menu__Subsection-Header{
+      font-weight: bold;
+      font-size: 16pt;
+    }
+    .Menu__Section-Content{
+      font-size: 1rem;
+    }
+    .Menu__Item{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 14pt;
+      margin-top: .1rem;
+    }
+    .Menu__Item-Note{
+      font-weight: lighter;
+      font-style: italic;
+      font-size: 1rem;
+    }
+    .Menu__Note{
+      margin-bottom: .5rem;
+      font-style: italic;
+      font-weight: lighter;
     }
     .ModalMenu{
       display: flex;
@@ -550,13 +574,16 @@ a {
 
   /* Landscape Orientation */
   @media (orientation: landscape){
+    hr{
+      visibility: hidden;
+    }
     .App{
       -webkit-user-drag: none;
       user-select: none;
       background-image: url(./images/meat01.jpg);
       background-attachment: fixed;
       position: fixed;
-      color: #FFFFF7;
+      color: rgb(31, 31, 31);
       width: 100vw;
       height: 100vh;
       font-size: 10pt;
@@ -576,9 +603,6 @@ a {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      /* background-color: #282C34DD;
-      border: 2px solid darkslategray;
-      border-radius: 8px; */
       margin: 2px;
       padding: 2px;
       width: 40%;
@@ -670,14 +694,6 @@ a {
       position: fixed;
       visibility: hidden;
     }
-    .FooterBlock{
-      position: fixed;
-      /* height: 20px; */
-    }
-    .HeaderBlock{
-      position: fixed;
-      /* height: 40px; */
-    }
     .Header{
       color: black;
       display: flex;
@@ -703,41 +719,80 @@ a {
     }
     .Menu{
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row;
       justify-content: center;
-      max-height: 95%;
-      z-index: 4;
+      align-items: center;
+      position: fixed;
+      height: 80%;
+      z-index: 1;
     }
-    .Menu__theMenu{
-      margin-left: 1rem;
-      margin-right: 1rem;
-      max-height: 90%;
-      max-width: 30%;
-    }
-    .Menu__ButtonsContainer{
+    .Menu__Header{
+      position: fixed;
+      top: 40px;
+      left: 0px;
+      min-width: 15%;
+      height: 80%;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: space-evenly;
-      width: 5%;
-      min-height: 70%;
-      max-height: 90%;
-    }
-    .Menu__Buttons{
-      display: flex;
-      justify-content: center;
       align-items: center;
-      border: 1px solid black;
-      border-radius: 8px;
+      z-index: 1;
+    }
+    .Menu__Header-Item{
+      margin: .25rem;
       user-select: none;
-      cursor: pointer;
-      margin: 2px;
-      padding: 4px;
-      background-color: whitesmoke;
-      color: #000000;
-      width: 100%;
-      height: 100%;
-      transition: .1s;
+      background-color: burlywood;
+      padding: 8px;
+      border-radius: 8px;
+      transition: .2s;
+      box-shadow: black 2px 2px 2px 2px;
+    }
+    .Menu__Menu-Area{
+      position: fixed;
+      top: 50px;
+      left: 100px;
+      right: 100px;
+      max-height: 80%;
+      /* max-width: 600px; */
+    }
+    .Menu__Page{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      /* margin: 1rem; */
+    }
+    .Menu__Subsection{
+      display: flex;
+      flex-direction: column;
+
+      max-width: 80%;
+      min-width: 20%;
+      margin: .5rem;
+    }
+    .Menu__Subsection-Header{
+      font-weight: bold;
+      font-size: 16pt;
+    }
+    .Menu__Section-Description{
+      font-size: .8rem;
+    }
+    .Menu__Item{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 1rem;
+      /* margin-top: .1rem; */
+    }
+    .Menu__Item-Note{
+      /* font-weight: lighter; */
+      font-style: italic;
+      font-size: 1rem;
+    }
+    .Menu__Note{
+      margin-bottom: .25rem;
+      font-style: italic;
+      /* font-weight: lighter; */
     }
     .ModalMenu{
       display: flex;
