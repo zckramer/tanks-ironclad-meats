@@ -203,13 +203,14 @@ a {
     z-index: 1;
   }
   .Menu__Header{
-    position: fixed;
+    visibility: hidden;
+    /* position: fixed;
     top: 80px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    z-index: -1;
+    z-index: -1; */
   }
   .Menu__Header-Item{
     margin: .5rem;
@@ -228,17 +229,20 @@ a {
     padding-top: 1rem;
     top: 120px;
     height: 100%;
-    width: 60%;
+    width: 80%;
   }
   .Menu__Page{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 1rem;
   }
   .Menu__Subsection{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    max-width: 40%;
+    min-width: 20%;
     margin: 1rem;
   }
   .Menu__Subsection-Header{
@@ -246,7 +250,11 @@ a {
     font-size: 16pt;
   }
   .Menu__Section-Content{
-    font-size: 14pt;
+    font-size: 12pt;
+  }
+  .Menu__Section-Description{
+    /* font-style: italic;
+    font-weight: lighter; */
   }
   .Menu__Item{
     display: flex;
@@ -254,6 +262,16 @@ a {
     justify-content: space-between;
     font-size: 14pt;
     margin-top: .4rem;
+  }
+  .Menu__Item-Note{
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 1rem;
+  }
+  .Menu__Note{
+    margin-bottom: .5rem;
+    font-style: italic;
+    font-weight: lighter;
   }
 
   /* .Menu__theMenu{
