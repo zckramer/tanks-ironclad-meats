@@ -51,7 +51,7 @@ function App() {
                             <Route path='/menu'><Menu /></Route>
                             <Route path='/merch'><ComingSoon /></Route>
                             <Route path='/contact'><Contact /></Route>
-                            {/* <Redirect to='/about' /> */}
+                            <Redirect to='/about' />
                         </Switch>
                     <p className='Footer' >Web Design/Development by  
                         <a href='https://www.github.com/zckramer' 
