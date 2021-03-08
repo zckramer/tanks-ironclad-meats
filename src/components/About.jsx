@@ -13,7 +13,6 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            
             <div className='About__Panel-Section'>
                 <div className='About__Panel-Header'>
                     Where you can find us: 
