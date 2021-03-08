@@ -16,9 +16,13 @@ a {
   cursor: pointer;
 }
 .App{
-  color: #000000;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
-/* .Body{
+  /* .Body{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,6 +55,11 @@ a {
 /* Desktop resolution */
 @media screen and (min-device-width: 1225px){
   .App{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     background-image: url(./images/meat01.jpg);
     background-position: center;
     background-size: cover;
