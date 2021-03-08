@@ -11,12 +11,12 @@ const Contact = () => {
                         Contact us!
                     </div>
                     <div className='Contact__Entry'>
-                        <span>Phone: </span>
+                        <div>Phone: </div>
                         <div>(614) 597-5433</div>
                     </div>
                     <div className='Contact__Entry'>
-                        <span>email: </span>
-                        <span><Link url='mailto: tanksmeats@gmail.com' text='tanksmeats@gmail.com' /></span>
+                        <div>email: </div>
+                        <Link url='mailto: tanksmeats@gmail.com' text='tanksmeats@gmail.com' />
                     </div>
                     <div className='Contact__Entry'>
                         <span>Follow us on social media: </span>

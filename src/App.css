@@ -692,6 +692,7 @@ a {
     .Contact__Entry{
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
       margin: 1rem;
     }
     .Contact__Entry-Container{
@@ -736,6 +737,9 @@ a {
     }
     .Header__Item:hover{
       transform: scale(1.05)
+    }
+    .Link{
+      transform: scale(.9);
     }
     .Menu{
       display: flex;
