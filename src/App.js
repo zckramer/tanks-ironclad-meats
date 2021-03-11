@@ -1,5 +1,5 @@
 import './App.css';
-import { 
+import React, { 
     useState, 
 } from 'react';
 
@@ -21,6 +21,25 @@ import Modal from './components/Modal/Modal';
 
 function App() {
     const [showModal, setShowModal] = useState(false);
+    const [dimensions, setDimensions] = useState({
+        height: window.innerHeight,
+        width: window.innerWidth
+    })
+
+
+    React.useEffect(()=> {
+        function handleResize() {
+            setDimensions({
+                height: window.innerHeight,
+                width: window.innerWidth
+            })
+            console.log('resized to: ', window.innerWidth, 'x', window.innerHeight)
+        }
+        window.addEventListener('resize', handleResize)
+        return _ => {
+            window.removeEventListener('resize', handleResize)
+        }
+    })
 
     function handleNavClick () {
         handleToggleModal();
@@ -47,11 +66,13 @@ function App() {
                         /> : null
                     }  
                         <Switch> 
+                            {/* <div style={{zIndex: 4}}>Rendered at {dimensions.width} x {dimensions.height}</div> */}
                             <Route path='/about'><About /></Route>
                             <Route path='/menu'><Menu /></Route>
                             <Route path='/merch'><ComingSoon /></Route>
                             <Route path='/contact'><Contact /></Route>
-                            <Redirect to='/about' />
+                            <Route path='/'><About /></Route>
+                            <Redirect to='/About' /> 
                         </Switch>
                     <p className='Footer' >Web Design/Development by  
                         <a href='https://www.github.com/zckramer' 
