@@ -29,6 +29,11 @@ function App() {
 
     React.useEffect(()=> {
         function handleResize() {
+            // variable for CSS viewport height
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+            // update the state for react re-render
             setDimensions({
                 height: window.innerHeight,
                 width: window.innerWidth
