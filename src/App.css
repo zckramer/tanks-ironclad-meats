@@ -230,10 +230,6 @@ a {
     transition: .2s;
     cursor: pointer; */
   }
-  .Menu__Header-Item:hover{
-    /* transform: scale(1.1);
-    box-shadow: 2px 2px 2px 2px; */
-  }
   .Menu__Menu-Area{
     position: fixed;
     top: 80px;
@@ -245,9 +241,6 @@ a {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-  }
-  .Menu__Page{
-    /* margin: 1rem; */
   }
   .Menu__Subsection{
     display: flex;
@@ -351,9 +344,12 @@ a {
     .App{
       background-image: url(./images/meat01.jpg);
       position: fixed;
+      top: 0px;
+      bottom: 0px;
       background-attachment: fixed;
       color: rgb(31, 31, 31);
       width: 100vw;
+      height: calc(var(--vh, 1vh) * 100);
       height: 100vh;
       overflow-y: hidden;
       /* transition: .2s; */
@@ -418,6 +414,7 @@ a {
       justify-content: center;
       align-items: center;
       position: fixed;
+      top: 20%;
       min-width: 100%;
       max-width: 100%;
       font-size: 18pt;
@@ -597,8 +594,11 @@ a {
       background-image: url(./images/meat01.jpg);
       background-attachment: fixed;
       position: fixed;
+      top: 0px;
+      bottom: 0px;
       color: rgb(31, 31, 31);
       width: 100vw;
+      height: calc(var(--vh, 1vh) * 100);
       height: 100vh;
       font-size: 10pt;
     }
