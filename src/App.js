@@ -30,7 +30,6 @@ function App() {
         width: window.innerWidth
     })
 
-
     React.useEffect(()=> {
         function handleResize() {
             // variable for CSS viewport height
