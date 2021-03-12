@@ -46,8 +46,11 @@ function App() {
         }
     })
 
-    function handleNavClick () {
+    function handleNavClick (e) {
         handleToggleModal();
+        if (e === "MENU") {
+            window.open('/TanksMenu.pdf');
+        }
     }
 
     function handleToggleModal () {
@@ -73,7 +76,7 @@ function App() {
                         <Switch> 
                             {/* <div style={{zIndex: 4}}>Rendered at {dimensions.width} x {dimensions.height}</div> */}
                             <Route path='/about'><About /></Route>
-                            <Route path='/menu'><Menu /></Route>
+                            <Route path='/menu'><About /></Route>
                             <Route path='/merch'><ComingSoon /></Route>
                             <Route path='/contact'><Contact /></Route>
                             <Route path='/'><About /></Route>
