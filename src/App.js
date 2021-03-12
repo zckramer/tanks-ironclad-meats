@@ -2,7 +2,7 @@ import './App.css';
 import { 
     useState, 
 } from 'react';
-
+import { createBrowserHistory } from 'history';
 import {
     BrowserRouter as Router,
     Switch,
@@ -18,6 +18,10 @@ import Menu from './components/MenuTyped'; // Typed Menu
 import Contact from './components/Contact';
 import ComingSoon from './components/ComingSoon';
 import Modal from './components/Modal/Modal';
+
+export const history = createBrowserHistory({
+    basename: process.env.PUBLIC_URL
+});
 
 function App() {
     const [showModal, setShowModal] = useState(false);
