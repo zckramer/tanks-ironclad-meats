@@ -2,7 +2,7 @@ import './App.css';
 import React, { 
     useState, 
 } from 'react';
-
+import { createBrowserHistory } from 'history';
 import {
     BrowserRouter as Router,
     Switch,
@@ -19,13 +19,16 @@ import Contact from './components/Contact';
 import ComingSoon from './components/ComingSoon';
 import Modal from './components/Modal/Modal';
 
+export const history = createBrowserHistory({
+    basename: process.env.PUBLIC_URL
+});
+
 function App() {
     const [showModal, setShowModal] = useState(false);
     const [dimensions, setDimensions] = useState({
         height: window.innerHeight,
         width: window.innerWidth
     })
-
 
     React.useEffect(()=> {
         function handleResize() {
