@@ -2,7 +2,9 @@ import './App.css';
 import React, { 
     useState, 
 } from 'react';
+
 import { createBrowserHistory } from 'history';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -41,7 +43,6 @@ function App() {
                 height: window.innerHeight,
                 width: window.innerWidth
             })
-            console.log('resized to: ', window.innerWidth, 'x', window.innerHeight)
         }
         window.addEventListener('resize', handleResize)
         return _ => {
@@ -52,7 +53,7 @@ function App() {
     function handleNavClick (e) {
         handleToggleModal();
         if (e === "MENU") {
-            window.open('/TanksMenu.pdf');
+            window.open('/TanksMenu.pdf', '_self');
         }
     }
 
