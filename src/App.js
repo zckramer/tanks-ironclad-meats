@@ -3,29 +3,18 @@ import React, {
     useState, 
 } from 'react';
 
-import { createBrowserHistory } from 'history';
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Redirect,
-} from 'react-router-dom';
-
 // Do NOT use 'Mobile' named components. Media queries are done in CSS now.
 import Header from './components/Header';
 import About from './components/About';
 // import Menu from './components/MenuSections'; // PDF menu
-import Menu from './components/MenuTyped'; // Typed Menu
+// import Menu from './components/MenuTyped'; // Typed Menu
 import Contact from './components/Contact';
 import ComingSoon from './components/ComingSoon';
 import Modal from './components/Modal/Modal';
 
-export const history = createBrowserHistory({
-    basename: process.env.PUBLIC_URL
-});
 
 function App() {
+    const [activePage, setActivePage] = useState(<About/>);
     const [showModal, setShowModal] = useState(false);
     const [dimensions, setDimensions] = useState({
         height: window.innerHeight,
@@ -52,59 +41,65 @@ function App() {
 
     function handleNavClick (e) {
         handleToggleModal();
+        console.log(e);
         if (e === "MENU") {
-            window.open('/TanksMenu.pdf', '_self');
+            if (dimensions.width > 1224) {
+                window.open('/TanksMenu.pdf');
+            } else {
+                window.open('/TanksMenu.pdf', '_self');
+            }
+        }
+        if (e === "ABOUT") {
+            setActivePage(<About/>);
+        }
+        if (e === "MERCH") {
+            setActivePage(<ComingSoon/>);
+        }
+        if (e === "CONTACT") {
+            setActivePage(<Contact/>);
         }
     }
 
     function handleToggleModal () {
         setShowModal(!showModal);
     }
-    
+
     return (
-        <Router>
-            <div className='App'>
-                <div className='Background' />
-                <div className='Body'>
-                    <div className='HeaderBlock' />
-                    <Header 
-                        navClick={(e)=>handleNavClick(e)}
-                        closeModal={(e)=>handleToggleModal(e)}
-                        showModal={showModal}
-                    />
-                    {showModal ? 
-                        <Modal 
-                        navClick={(e)=>handleNavClick(e)}
-                        /> : null
-                    }  
-                        <Switch> 
-                            {/* <div style={{zIndex: 4}}>Rendered at {dimensions.width} x {dimensions.height}</div> */}
-                            <Route path='/about'><About /></Route>
-                            <Route path='/menu'><About /></Route>
-                            <Route path='/merch'><ComingSoon /></Route>
-                            <Route path='/contact'><Contact /></Route>
-                            <Route path='/'><About /></Route>
-                            <Redirect to='/About' /> 
-                        </Switch>
-                    <p className='Footer' >Web Design/Development by  
-                        <a href='https://www.github.com/zckramer' 
-                            rel='noreferrer'
-                            target='_blank'
-                            style={{
-                                textDecoration:'none', 
-                                color:'inherit', 
-                                backgroundColor:'#282c34DD', 
-                                margin: '4px', 
-                                borderRadius:'6px', 
-                                fontWeight:'bold',
-                            }}
-                            > Zack Kramer 
-                        </a>
-                    </p>
-                </div>
-                <div className='FooterBlock' />
+        <div className='App'>
+            <div className='Background' />
+            <div className='Body'>
+                <div className='HeaderBlock' />
+                <Header 
+                    navClick={(e)=>handleNavClick(e)}
+                    closeModal={(e)=>handleToggleModal(e)}
+                    showModal={showModal}
+                />
+                {showModal ? 
+                    <Modal 
+                    navClick={(e)=>handleNavClick(e)}
+                    /> : null
+                }
+
+                {activePage}
+
+                <p className='Footer' >Web Design/Development by  
+                    <a href='https://www.github.com/zckramer' 
+                        rel='noreferrer'
+                        target='_blank'
+                        style={{
+                            textDecoration:'none', 
+                            color:'inherit', 
+                            backgroundColor:'#282c34DD', 
+                            margin: '4px', 
+                            borderRadius:'6px', 
+                            fontWeight:'bold',
+                        }}
+                        > Zack Kramer 
+                    </a>
+                </p>
             </div>
-        </Router>
+            <div className='FooterBlock' />
+        </div>
     );
 }
 
