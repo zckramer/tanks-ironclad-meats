@@ -18,6 +18,9 @@ a {
 .App{
   color: #FFFFFF;
 }
+.Background{
+  background-color: #4f7019;
+}
 /* .Body{
   display: flex;
   justify-content: center;
@@ -37,7 +40,7 @@ a {
   cursor: pointer;
   transition: .2s;
   font-weight: bold;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   font-size: 1.5rem;
 }
 .Link:hover{
@@ -46,10 +49,30 @@ a {
 }
 .Header{
   z-index: 5;
+  background-color: #ffffff;
+  border-bottom: 4px solid black;
 }
+.ModalMenu{
+  background-color: #ffffff;
+  border: 4px solid #4f7019;
+}
+.ModalMenu__Item{
+  color: black;
 
+  font-weight: bolder;
+
+}
+.TextPanel{
+  background-color: #FFFFFF;
+  padding: .8rem;
+}
 /* Desktop resolution */
 @media screen and (min-device-width: 1225px){
+  #WhereYouCanFindUs{
+    font-size: medium;
+    color: whitesmoke;
+    font-weight: bolder;
+  }
   .App{
     background-image: url(./images/meat01.jpg);
     background-position: center;
@@ -67,27 +90,40 @@ a {
     font-size: 20pt;
     z-index: 4;
   }
+  .About__Logo{
+    width: 50%;
+  }
   .About__Panel{
+  }
+  .TextPanel{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(136, 136, 136); */
-    /* border: 2px solid darkslategray; */
     border-radius: 8px;
-    margin: 8px;
-    padding: 4px;
-    width: 70%;
+    margin: .4rem;
+    min-width: 30%;
+    max-width: 70%;
   }
-  .About__Panel-Header{
-    transform: scale(1.4);
+  .TextPanel__Title{
+    font-size: 1.5rem;
+  }
+  .TextPanel__p1{
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .TextPanel__p2{
+    font-size: 1.1rem;
   }
   .About__Panel-Section{
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
   }
   .Background {
     position: fixed;
@@ -96,7 +132,7 @@ a {
     left: 15%;
     height: 100vh;
     width: 70%;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     z-index: 0;
     border-left: 4px solid black;
     border-right: 4px solid black;
@@ -122,6 +158,7 @@ a {
     z-index: 1;
   }
   .Contact__Panel{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,13 +173,24 @@ a {
   .Contact__Panel-Section{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #4f7019; */
+    width: 70%;
     margin: 1rem;
+    padding: 3rem;
+    border: 4px solid #4f7019;
+    border-radius: 8px;
   }
   .Contact__Panel-Header{
     transform: scale(1.3);
     margin: 1rem;
   }
   .Contact__Entry{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: .5rem;
   }
   .Contact__Entry-Container{
@@ -150,7 +198,7 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
+    width: 80%;
     margin: .25rem;
     max-height: 4rem;
     border: 2px solid whitesmoke;
@@ -188,11 +236,9 @@ a {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    background-color: #FFFFFF;
     height: 80px;
     font-size: calc(10px + 2vmin);
     z-index: 1;
-    border-bottom: 3px solid black;
   }
   .Header__Item{
     user-select: none;
@@ -203,6 +249,18 @@ a {
   .Header__Item:hover{
     transform: scale(1.05);
   }
+  .Link{
+    cursor: pointer;
+    transition: .2s;
+    font-weight: bold;
+    /* transform: scale(1.1); */
+    font-size: 1.5rem;
+  }
+  .Link:hover{
+    transform: scale(1.1);
+    font-weight: bolder;  
+  }
+  
   .Menu{
     display: flex;
     flex-direction: column;
@@ -311,9 +369,7 @@ a {
     display: flex;
     position: fixed;
     z-index: 10;
-    background-color: #D7DEE6;
     color: black;
-    border: 2px solid darkslategray;
     border-radius: 8px;
     margin: 8px;
     padding: 4px;
@@ -478,10 +534,8 @@ a {
       align-items: center;
       justify-content: space-evenly;
       width: 100%;
-      background-color: #FFFFFF;
       height: 40px;
       font-size: calc(10px + 2vmin);
-      border-bottom: 3px solid black;
     }
     .Header__Item{
       user-select: none;
@@ -565,9 +619,7 @@ a {
       display: flex;
       position: fixed;
       z-index: 10;
-      background-color: #D7DEE6;
       color: black;
-      border: 2px solid darkslategray;
       border-radius: 8px;
       margin: 2px;
       padding: 1px;
@@ -730,11 +782,9 @@ a {
       align-items: center;
       justify-content: space-evenly;
       width: 100%;
-      background-color: #FFFFFF;
       height: 40px;
       font-size: calc(10px + 2vmin);
       z-index: 4;
-      border-bottom: 3px solid black;
     }
     .Header__Item{
       user-select: none;
@@ -829,9 +879,7 @@ a {
       display: flex;
       position: fixed;
       z-index: 10;
-      background-color: #D7DEE6;
       color: black;
-      border: 2px solid darkslategray;
       border-radius: 8px;
       margin: 2px;
       padding: 1px;

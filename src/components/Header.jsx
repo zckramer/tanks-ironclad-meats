@@ -1,4 +1,4 @@
-import TankLogo from '../images/Logo_Tank.png';
+import TankLogo from '../images/tank_logo.jpg';
 import RibsMenuIcon from '../images/ribs_menu_icon.png';
 import CrossRibsIcon from '../images/cross_ribs_icon.png';
 
@@ -16,7 +16,6 @@ const Header = (props) => {
                     alt='Close Navigation Menu'
                     onClick={()=>props.closeModal()} 
                 />
-                    
                 :
                 <img 
                     src={RibsMenuIcon} 
