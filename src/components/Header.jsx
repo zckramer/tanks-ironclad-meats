@@ -1,6 +1,6 @@
 import TankLogo from '../images/tank_logo.jpg';
-import RibsMenuIcon from '../images/ribs_menu_icon.png';
-import CrossRibsIcon from '../images/cross_ribs_icon.png';
+import MenuIcon from '../images/Hamburger_icon_black.png';
+import CloseIcon from '../images/x_icon_black.png';
 
 const Header = (props) => {
     return (
@@ -8,17 +8,18 @@ const Header = (props) => {
             <img className='Header__Item' 
                 src={TankLogo} 
                 alt="Tank Logo" 
+                style={{cursor: 'default'}}
             />
             {props.showModal ? 
                 <img 
-                    src={CrossRibsIcon}
+                    src={CloseIcon}
                     className='Header__Item' 
                     alt='Close Navigation Menu'
                     onClick={()=>props.closeModal()} 
                 />
                 :
                 <img 
-                    src={RibsMenuIcon} 
+                    src={MenuIcon} 
                     className={'Header__Item'} 
                     alt='Open Navigation Menu' 
                     onClick={()=>props.closeModal()} 

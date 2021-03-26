@@ -40,8 +40,7 @@ a {
   cursor: pointer;
   transition: .2s;
   font-weight: bold;
-  /* transform: scale(1.1); */
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
 .Link:hover{
   transform: scale(1.2);
@@ -58,9 +57,7 @@ a {
 }
 .ModalMenu__Item{
   color: black;
-
   font-weight: bolder;
-
 }
 .TextPanel{
   background-color: #FFFFFF;
@@ -95,26 +92,6 @@ a {
   }
   .About__Panel{
   }
-  .TextPanel{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    margin: .4rem;
-    min-width: 30%;
-    max-width: 70%;
-  }
-  .TextPanel__Title{
-    font-size: 1.5rem;
-  }
-  .TextPanel__p1{
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  .TextPanel__p2{
-    font-size: 1.1rem;
-  }
   .About__Panel-Section{
     background-color: #ffffff;
     display: flex;
@@ -132,14 +109,12 @@ a {
     left: 15%;
     height: 100vh;
     width: 70%;
-    /* background-color: #FFFFFF; */
     z-index: 0;
     border-left: 4px solid black;
     border-right: 4px solid black;
   }  
   .Body{
   display: flex;
-  /* background-color: #5f2e25; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -158,14 +133,10 @@ a {
     z-index: 1;
   }
   .Contact__Panel{
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: #282C34DD; */
-    /* border: 2px solid darkslategray; */
-    /* border-radius: 8px; */
     margin: 8px;
     padding: 4px;
     width: 100%;
@@ -175,7 +146,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: #4f7019; */
     width: 70%;
     margin: 1rem;
     padding: 3rem;
@@ -230,11 +200,11 @@ a {
   .Header{
     color: black;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     position: fixed;
     top: 0;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     height: 80px;
     font-size: calc(10px + 2vmin);
@@ -245,6 +215,8 @@ a {
     cursor: pointer;
     height: 70px;
     transition: .1s;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .Header__Item:hover{
     transform: scale(1.05);
@@ -253,7 +225,6 @@ a {
     cursor: pointer;
     transition: .2s;
     font-weight: bold;
-    /* transform: scale(1.1); */
     font-size: 1.5rem;
   }
   .Link:hover{
@@ -273,22 +244,9 @@ a {
   }
   .Menu__Header{
     visibility: hidden;
-    /* position: fixed;
-    top: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: -1; */
   }
   .Menu__Header-Item{
     visibility: hidden;
-    /* margin: .5rem;
-    background-color: burlywood;
-    padding: 8px;
-    border-radius: 8px;
-    transition: .2s;
-    cursor: pointer; */
   }
   .Menu__Menu-Area{
     position: fixed;
@@ -331,9 +289,9 @@ a {
   .Menu__Note{
     margin-bottom: .5rem;
     font-style: italic;
-    /* font-weight: lighter; */
   }
 
+  /* Typed Menu styling, not in use */
   /* .Menu__theMenu{
     margin: 1rem;
     max-height: 80%;
@@ -363,7 +321,8 @@ a {
   }
   .Menu__Buttons:hover{
     transform: scale(1.05);
-  } */
+  } 
+  */
 
   .ModalMenu{
     display: flex;
@@ -374,7 +333,7 @@ a {
     margin: 8px;
     padding: 4px;
     top: 80px;
-    left: 80px;
+    right: 80px;
     min-width: 15%;
     min-height: 15%;
     flex-direction: column;
@@ -390,6 +349,26 @@ a {
     user-select: none;
     cursor: pointer;
     transform: scale(1.1) rotate(4deg);
+  }
+  .TextPanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin: .4rem;
+    min-width: 30%;
+    max-width: 70%;
+  }
+  .TextPanel__Title{
+    font-size: 1.5rem;
+  }
+  .TextPanel__p1{
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .TextPanel__p2{
+    font-size: 1.1rem;
   }
 
 }
@@ -410,22 +389,27 @@ a {
       height: calc(var(--vh, 1vh) * 100);
       height: 100vh;
       overflow-y: hidden;
-      /* transition: .2s; */
     }
     .About{
       display: flex;
       position: fixed;
       top: 20%;
-      left: 20px;
-      right: 20px;
+      margin-top: 1rem;
+      left: 0px;
+      right: 0px;
       bottom: 15%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 90%;
+      width: 100%;
+      overflow-y: scroll;
       z-index: 1;
     }
-    .About__Panel{
+    .About__Logo{
+      max-width: 90%;
+      border-radius: 8px;
+    }
+    /* .About__Panel{
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
@@ -438,7 +422,6 @@ a {
       display: flex;
       justify-content: center;
       transform: scale(1.2);
-
       font-weight: bold;
     }
     .About__Panel-Section{
@@ -446,7 +429,7 @@ a {
       flex-direction: column;
       justify-content: center;
       margin: .2rem;
-    }
+    } */
     .Background {
       position: fixed;
       top: 20%;
@@ -454,7 +437,7 @@ a {
       left: 0%;
       height: 70%;
       width: 100vh;
-      background-color: #FFFFFF;
+      background-color: #4f7019;
       z-index: 0;
       border-top: 4px solid black;
       border-bottom: 4px solid black;
@@ -473,12 +456,15 @@ a {
       align-items: center;
       position: fixed;
       top: 20%;
+      bottom: 15%;
+      overflow-y: scroll;
+      margin-top: 1rem;
       min-width: 100%;
       max-width: 100%;
       font-size: 18pt;
       z-index: 1;
     }
-    .Contact__Panel{
+    /* .Contact__Panel{
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -496,9 +482,13 @@ a {
     .Contact__Panel-Header{
       transform: scale(1.3);
       margin: 1rem;
-    }
+    } */
     .Contact__Entry{
-      margin: .5rem;
+      margin: .1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     .Contact__Entry-Container{
       display: flex;
@@ -522,26 +512,26 @@ a {
       visibility: hidden;
       position: fixed;
     }
-    /* .HeaderBlock{
-      height: 40px;
-    } */
     .Header{
       color: black;
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row;
       position: fixed;
       top: 0;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
       width: 100%;
       height: 40px;
       font-size: calc(10px + 2vmin);
     }
     .Header__Item{
       user-select: none;
-      height: 40px;
+      height: 35px;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
-    .Menu{
+    /* Typed menu, not in use */
+    /* .Menu{
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -582,7 +572,6 @@ a {
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
-      /* margin: 1rem; */
     }
     .Menu__Subsection{
       display: flex;
@@ -606,15 +595,13 @@ a {
       margin-top: .1rem;
     }
     .Menu__Item-Note{
-      /* font-weight: lighter; */
       font-style: italic;
       font-size: 1rem;
     }
     .Menu__Note{
       margin-bottom: .5rem;
       font-style: italic;
-      /* font-weight: lighter; */
-    }
+    } */
     .ModalMenu{
       display: flex;
       position: fixed;
@@ -624,7 +611,7 @@ a {
       margin: 2px;
       padding: 1px;
       top: 40px;
-      left: 10px;
+      right: 10px;
       min-width: 30%;
       min-height: 30%;
       flex-direction: column;
@@ -636,8 +623,27 @@ a {
       transition: .5s;
       padding: .4rem;
     }
+    .TextPanel{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      margin: .2rem;
+      min-width: 30%;
+      max-width: 70%;
+    }
+    .TextPanel__Title{
+      font-size: 1.1rem;
+    }
+    .TextPanel__p1{
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .TextPanel__p2{
+      font-size: .8rem;
+    }
   }
-
 
   /* Landscape Orientation */
   @media (orientation: landscape){
@@ -663,15 +669,16 @@ a {
       flex-direction: row;
       justify-content: center;
       position: fixed;
-      left: 100px;
-      right: 100px;
+      left: 110px;
+      right: 110px;
       align-items: center;
-      /* width: 100%; */
-      /* height: 100%; */
       z-index: 1;
       flex-wrap: wrap;
     }
-    .About__Panel{
+    .About__Logo{
+      max-width: 60%;
+    }
+    /* .About__Panel{
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -689,16 +696,16 @@ a {
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* margin: .25rem; */
-    }
+    } */
     .Background {
       position: fixed;
       top: 0;
       bottom: 0;
       left: 15%;
+      right: 15%;
       height: 100vh;
       width: 70%;
-      background-color: #FFFFFF;
+      background-color: #4f7019;
       z-index: 0;
       border-left: 4px solid black;
       border-right: 4px solid black;
@@ -776,11 +783,11 @@ a {
     .Header{
       color: black;
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row;
       position: absolute;
       top: 0;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
       width: 100%;
       height: 40px;
       font-size: calc(10px + 2vmin);
@@ -790,10 +797,12 @@ a {
       user-select: none;
       cursor: pointer;
       height: 40px;
+      margin-left: 1rem;
+      margin-right: 1rem;
       transition: .1s;
     }
     .Header__Item:hover{
-      transform: scale(1.05)
+      /* transform: scale(1.05) */
     }
     .Link{
       transform: scale(.9);
@@ -884,7 +893,7 @@ a {
       margin: 2px;
       padding: 1px;
       top: 40px;
-      left: 10px;
+      right: 10px;
       min-width: 20%;
       min-height: 30%;
       flex-direction: column;
@@ -895,6 +904,26 @@ a {
     .ModalMenu__Item{
       transition: .5s;
       padding: .4rem;
+    }
+    .TextPanel{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      margin: .2rem;
+      min-width: 70%;
+      max-width: 100%;
+    }
+    .TextPanel__Title{
+      font-size: 1.1rem;
+    }
+    .TextPanel__p1{
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .TextPanel__p2{
+      font-size: .8rem;
     }
   }
 }
