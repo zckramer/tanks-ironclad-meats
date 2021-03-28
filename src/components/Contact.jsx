@@ -10,8 +10,8 @@ const Contact = () => {
                 title='Contact us!'
             />
             <TextPanel
-                p1='(614) 597-5433'
-                p2={<Link url='mailto: tanksmeats@gmail.com' text='tanksmeats@gmail.com' />}
+                p1={<Link url='mailto: tanksmeats@gmail.com' text='tanksmeats@gmail.com' />}
+                p2='(614) 597-5433'
             />
             <TextPanel>
             <div className='Contact__Entry'>

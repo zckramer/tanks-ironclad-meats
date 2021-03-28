@@ -88,7 +88,7 @@ a {
     background-size: cover;
     color: rgb(31, 31, 31);
     width: 100vw;
-    height: 100vh;
+    height: 100%;
   }
   .About{
     display: flex;
@@ -346,7 +346,7 @@ a {
       background-size: cover;
       color: rgb(31, 31, 31);
       width: 100vw;
-      height: 100vh;
+      height: 100%;
       }
     .About{
       display: flex;
@@ -625,7 +625,7 @@ a {
       background-size: cover;
       color: rgb(31, 31, 31);
       width: 100vw;
-      height: 100vh;
+      height: 100%;
     }
     .About{
       display: flex;

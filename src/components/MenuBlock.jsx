@@ -1,5 +1,4 @@
 import Link from './Link';
-import TextPanel from './TextPanel';
 
 const MenuBlock = () => {
     return (
@@ -9,10 +8,6 @@ const MenuBlock = () => {
                 url='/TanksMenu.pdf' 
                 // style={{color: 'white', fontSize: '30'}}
             />
-            {/* <TextPanel 
-                title={<Link text='Click here to check out the Menu!' 
-                url='/TanksMenu.pdf' />} 
-            /> */}
         </div>
     )
 }

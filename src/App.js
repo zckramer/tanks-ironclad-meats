@@ -14,7 +14,6 @@ import Contact from './components/Contact';
 import ComingSoon from './components/ComingSoon';
 import Modal from './components/Modal/Modal';
 
-const whereYouCanFindUs = document.getElementById('WhereYouCanFindUs');
 
 function App() {
     // const [activePage, setActivePage] = useState(<About/>);
@@ -23,8 +22,6 @@ function App() {
         height: window.innerHeight,
         width: window.innerWidth
     })
-
-    const ref = React.useRef();
 
     React.useEffect(()=> {
         function handleResize() {
@@ -46,23 +43,17 @@ function App() {
 
     function handleNavClick (e) {
         handleToggleModal();
-        console.log(e);
         if (e === "MENU") {
             if (dimensions.width > 1224) {
                 window.open('/TanksMenu.pdf');
             } else {
                 window.open('/TanksMenu.pdf', '_self');
             }
+            return ;
         }
-        if (e === "ABOUT") {
-            // setActivePage(<About/>);
-        }
-        if (e === "MERCH") {
-            // setActivePage(<ComingSoon/>);
-        }
-        if (e === "CONTACT") {
-            // setActivePage(<Contact/>);
-        }
+        
+        const scrollToElement = document.querySelector(e.target.dataset.scroll);
+        scrollToElement.scrollIntoView();
     }
 
     function handleToggleModal () {
@@ -73,7 +64,6 @@ function App() {
         <div className='App'>
             <div className='Background' />
             <div className='Body'>
-                {/* <div className='Header-Block' /> */}
                 <Header 
                     navClick={(e)=>handleNavClick(e)}
                     closeModal={(e)=>handleToggleModal(e)}
