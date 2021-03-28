@@ -5,13 +5,14 @@ import React, {
 
 // Do NOT use 'Mobile' named components. Media queries are done in CSS now.
 import Header from './components/Header';
+import IntroBlock from './components/IntroBlock';
 import About from './components/About';
+import MenuBlock from './components/MenuBlock';
 // import Menu from './components/MenuSections'; // PDF menu
 // import Menu from './components/MenuTyped'; // Typed Menu
 import Contact from './components/Contact';
 import ComingSoon from './components/ComingSoon';
 import Modal from './components/Modal/Modal';
-
 
 function App() {
     const [activePage, setActivePage] = useState(<About/>);
@@ -68,7 +69,7 @@ function App() {
         <div className='App'>
             <div className='Background' />
             <div className='Body'>
-                <div className='HeaderBlock' />
+                {/* <div className='Header-Block' /> */}
                 <Header 
                     navClick={(e)=>handleNavClick(e)}
                     closeModal={(e)=>handleToggleModal(e)}
@@ -79,10 +80,21 @@ function App() {
                     navClick={(e)=>handleNavClick(e)}
                     /> : null
                 }
-
-                {activePage}
-
-                <p className='Footer' >Web Design/Development by  
+                <IntroBlock />
+                <About />
+                <MenuBlock />
+                <Contact />
+            </div>
+                <p 
+                    className='Footer'
+                    style={{
+                        position: 'fixed',
+                        bottom: 0,
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)'
+                    }} 
+                >
+                    Web Design/Development by  
                     <a href='https://www.github.com/zckramer' 
                         rel='noreferrer'
                         target='_blank'
@@ -93,12 +105,12 @@ function App() {
                             margin: '4px', 
                             borderRadius:'6px', 
                             fontWeight:'bold',
+                            marginLeft: 'auto',
+                            marginRight: 'auto'
                         }}
                         > Zack Kramer 
                     </a>
                 </p>
-            </div>
-            <div className='FooterBlock' />
         </div>
     );
 }

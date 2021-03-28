@@ -1,11 +1,9 @@
 import Link from './Link';
-import Logo from '../images/tank_logo.jpg';
 import TextPanel from './TextPanel';
 
 const About = () => {
     return (
         <div className='About'>
-            <img className='About__Logo' src={Logo} alt="Tank's Iron Clad Meats Logo"/>
             <TextPanel 
                 title='Jeff "Tank" Harkleroad' 
                 p1='Serving Columbus and Central Ohio, we make smoked and slow-cooked meats and comfort cuisine.' 

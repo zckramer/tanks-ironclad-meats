@@ -3,6 +3,7 @@ const Link = (props) => {
         <div
             className='Link'
             onClick={()=>window.open(props.url)}
+            style={{...props.style}}
         >
             {props.text}
         </div>

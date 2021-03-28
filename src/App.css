@@ -5,8 +5,8 @@
 
 /* #5f2e25 exp color 1 */
 /* # exp color 2 */
-
 HTML {
+  font-family: 'Oleo Script', cursive;
   background-color: black;
 }
 a {
@@ -19,7 +19,7 @@ a {
   color: #FFFFFF;
 }
 .Background{
-  background-color: #4f7019;
+  background-color: #4f7019c4;
 }
 /* .Body{
   display: flex;
@@ -40,7 +40,6 @@ a {
   cursor: pointer;
   transition: .2s;
   font-weight: bold;
-  /* font-size: 1.5rem; */
 }
 .Link:hover{
   transform: scale(1.2);
@@ -51,6 +50,11 @@ a {
   background-color: #ffffff;
   border-bottom: 4px solid black;
 }
+.Menu-Block{
+  background-color: black;
+  color: white;
+}
+
 .ModalMenu{
   background-color: #ffffff;
   border: 4px solid #4f7019;
@@ -61,8 +65,8 @@ a {
 }
 .TextPanel{
   background-color: #FFFFFF;
-  padding: .8rem;
 }
+
 /* Desktop resolution */
 @media screen and (min-device-width: 1225px){
   #WhereYouCanFindUs{
@@ -80,81 +84,64 @@ a {
   }
   .About{
     display: flex;
+    font-family: 'Oleo Script', cursive;
+    font-size: 72;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     flex-direction: column;
-    justify-content: center;
+    /* min-height: 100vh; */
+    width: 90%;
+    justify-content:flex-start;
     align-items: center;
-    width: 70%;
-    font-size: 20pt;
-    z-index: 4;
-  }
-  .About__Logo{
-    width: 50%;
-  }
-  .About__Panel{
-  }
-  .About__Panel-Section{
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 8px;
+    /* outline: 1px solid red; */
+    box-sizing: content-box;
+    /* margin-bottom: 600px; */
+    /* min-height: 930px; */
+    /* font-size: 20pt; */
+    /* z-index: 4; */
   }
   .Background {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 15%;
+    right: 15%;
     height: 100vh;
     width: 70%;
     z-index: 0;
     border-left: 4px solid black;
     border-right: 4px solid black;
-  }  
+  }
   .Body{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 95%;
-  margin: 0;
-  z-index: 1;
+    position:absolute;
+    width: auto;
+    text-align: center;
+    top: 90px;
+    bottom: 52px;
+    left: 20%;
+    right: 20%;
+    overflow-y: auto;
+    padding: .5rem;
+    scrollbar-width: none;
+  }
+  .Body::-webkit-scrollbar{
+    display: none;
   }
   .Contact{
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 80%;
-    max-width: 90%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 90%;
     font-size: 24pt;
-    z-index: 1;
-  }
-  .Contact__Panel{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 8px;
-    padding: 4px;
-    width: 100%;
-  }
-  .Contact__Panel-Section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    margin: 1rem;
-    padding: 3rem;
-    border: 4px solid #4f7019;
-    border-radius: 8px;
-  }
-  .Contact__Panel-Header{
-    transform: scale(1.3);
-    margin: 1rem;
+    min-height: 400px;
   }
   .Contact__Entry{
     display: flex;
@@ -179,7 +166,6 @@ a {
   .Contact__Social-Link{
     max-height: 3rem;
     cursor: pointer;
-  
     transition: .2s;
   }
   .Contact__Social-Link:hover{
@@ -203,12 +189,13 @@ a {
     flex-direction: row;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 80px;
-    font-size: calc(10px + 2vmin);
-    z-index: 1;
+    z-index: 4;
   }
   .Header__Item{
     user-select: none;
@@ -221,74 +208,45 @@ a {
   .Header__Item:hover{
     transform: scale(1.05);
   }
+  .IntroBlock{
+    height: 100%;
+    padding-bottom: 5rem;
+  }
+  .Intro__Background{
+    position: relative;
+    /* size: fill; */
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .Intro__Logo{
+    position: absolute;
+    padding: 1rem;
+    width: 50%;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
   .Link{
     cursor: pointer;
     transition: .2s;
     font-weight: bold;
-    font-size: 1.5rem;
   }
   .Link:hover{
     transform: scale(1.1);
     font-weight: bolder;  
   }
-  
-  .Menu{
+  .Menu-Block{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    position: fixed;
-    height: 100%;
-    z-index: 1;
-  }
-  .Menu__Header{
-    visibility: hidden;
-  }
-  .Menu__Header-Item{
-    visibility: hidden;
-  }
-  .Menu__Menu-Area{
-    position: fixed;
-    top: 80px;
-    left: 200px;
-    right: 200px;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  .Menu__Subsection{
-    display: flex;
-    flex-direction: column;
-    max-width: 40%;
-    min-width: 20%;
-    margin: 1rem;
-  }
-  .Menu__Subsection-Header{
-    font-weight: bold;
-    font-size: 16pt;
-  }
-  .Menu__Section-Content{
-    font-size: 12pt;
-  }
-  .Menu__Item{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 14pt;
-    margin-top: .4rem;
-  }
-  .Menu__Item-Note{
-    font-weight: lighter;
-    font-style: italic;
-    font-size: 1rem;
-  }
-  .Menu__Note{
-    margin-bottom: .5rem;
-    font-style: italic;
+    min-width: 90%;
+    min-height: 300px;
+    border-radius: 8px;
+    font-size: xx-large;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    /* transition: 1.8s; */
   }
 
   /* Typed Menu styling, not in use */
@@ -321,8 +279,7 @@ a {
   }
   .Menu__Buttons:hover{
     transform: scale(1.05);
-  } 
-  */
+  }*/
 
   .ModalMenu{
     display: flex;
@@ -356,22 +313,23 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    margin: .4rem;
-    min-width: 30%;
-    max-width: 70%;
+    margin: .8rem;
+    padding: 3rem;
+    min-width: 80%;
+    max-width: 100%;
   }
   .TextPanel__Title{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .TextPanel__p1{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
   .TextPanel__p2{
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
-
 }
+
 /* Smaller than desktop resolution. Check for Orientation */
 @media screen and (max-device-width: 1224px) {
 
@@ -713,7 +671,7 @@ a {
     .Body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 85%;
     padding-top: 40px;
@@ -800,9 +758,6 @@ a {
       margin-left: 1rem;
       margin-right: 1rem;
       transition: .1s;
-    }
-    .Header__Item:hover{
-      /* transform: scale(1.05) */
     }
     .Link{
       transform: scale(.9);
