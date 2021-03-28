@@ -14,13 +14,17 @@ import Contact from './components/Contact';
 import ComingSoon from './components/ComingSoon';
 import Modal from './components/Modal/Modal';
 
+const whereYouCanFindUs = document.getElementById('WhereYouCanFindUs');
+
 function App() {
-    const [activePage, setActivePage] = useState(<About/>);
+    // const [activePage, setActivePage] = useState(<About/>);
     const [showModal, setShowModal] = useState(false);
     const [dimensions, setDimensions] = useState({
         height: window.innerHeight,
         width: window.innerWidth
     })
+
+    const ref = React.useRef();
 
     React.useEffect(()=> {
         function handleResize() {
@@ -51,13 +55,13 @@ function App() {
             }
         }
         if (e === "ABOUT") {
-            setActivePage(<About/>);
+            // setActivePage(<About/>);
         }
         if (e === "MERCH") {
-            setActivePage(<ComingSoon/>);
+            // setActivePage(<ComingSoon/>);
         }
         if (e === "CONTACT") {
-            setActivePage(<Contact/>);
+            // setActivePage(<Contact/>);
         }
     }
 

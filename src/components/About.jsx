@@ -1,9 +1,9 @@
 import Link from './Link';
 import TextPanel from './TextPanel';
 
-const About = () => {
+const About = (props) => {
     return (
-        <div className='About'>
+        <div className='About' ref={props.ref}>
             <TextPanel 
                 title='Jeff "Tank" Harkleroad' 
                 p1='Serving Columbus and Central Ohio, we make smoked and slow-cooked meats and comfort cuisine.' 
