@@ -1,4 +1,4 @@
-import TankLogo from '../images/tank_logo.jpg';
+import TankLogo from '../images/tank_logo.png';
 import meat1 from '../images/meat01.jpg';
 import meat2 from '../images/meat02.jpg';
 import meat3 from '../images/meat03.jpg';
