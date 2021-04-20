@@ -125,8 +125,8 @@ a {
     text-align: center;
     top: 90px;
     bottom: 52px;
-    left: 20%;
-    right: 20%;
+    left: 15.5%;
+    right: 15%;
     overflow-y: auto;
     padding: .5rem;
     scrollbar-width: none;
@@ -213,7 +213,7 @@ a {
     transform: scale(1.05);
   }
   .IntroBlock{
-    height: 100%;
+    height: 100vh;
     padding-bottom: 5rem;
   }
   .Intro__Background{
@@ -226,10 +226,15 @@ a {
   .Intro__Logo{
     position: absolute;
     padding: 1rem;
-    width: 50%;
+    width: 20%;
     top: 0;
     right: 0;
     z-index: 2;
+  }
+  .Intro__Logo-Background{
+    position: absolute;
+    top: 10%;
+    /* background-color: black; */
   }
   .Link{
     cursor: pointer;
@@ -477,14 +482,11 @@ a {
       z-index: 1;
     }
     .Intro__Logo-Background{
-      position: relative;
-      top: 0;
-      margin-left: auto;
-      margin-right: auto;
-      /* width: 100%; */
-      /* height: 100%; */
-
+      position: absolute;
+      top: 20%;
+      /* background-color: black; */
     }
+    
     /* Typed menu, not in use */
     /* .Menu{
       display: flex;
@@ -768,12 +770,10 @@ a {
       /* outline: 2px solid red; */
     }
     .Intro__Background{
-      position: relative;
-      size: fill;
-      top: 0;
+      position: absolute;
       width: 100%;
-      height: auto;
-      z-index: 0;
+      right: 5%;
+      /* bottom: 0; */
     }
     .Intro__Logo{
       position: absolute;
@@ -784,11 +784,11 @@ a {
       z-index: 1;
     }
     .Intro__Logo-Background{
-      position: relative;
-      top: 0;
-      margin-left: auto;
-      margin-right: auto;
-      width: 75%;
+      position: absolute;
+      top: 25;
+      /* margin-left: auto; */
+      /* margin-right: auto; */
+      width: 90%;
     }
     /* .Menu{
       display: flex;
