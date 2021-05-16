@@ -224,7 +224,7 @@ a {
     z-index: 0;
   }
   .Intro__Logo{
-    /* visibility: hidden; */
+    visibility: hidden;
     position: absolute;
     padding: 1rem;
     width: 20%;
@@ -485,14 +485,15 @@ a {
     }
     .Intro__Logo-Background{
       position: absolute;
-      top: 20%;
+      top: 15%;
       /* background-color: black; */
     }
     .Intro__Background-Carousel{
       position: relative;
       top: 0;
-      width: 95%;
-      height: 100%;
+      left: 0;
+      width: 100vw;
+      height: 40vh;
     }
     /* Typed menu, not in use */
     /* .Menu{
@@ -802,7 +803,7 @@ a {
       top: 0;
       left: 0;
       width: 90%;
-      height: 100%;
+      height: 80vh;
     }
 
     /* .Menu{

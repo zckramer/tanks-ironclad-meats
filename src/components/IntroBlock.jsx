@@ -50,7 +50,7 @@ const IntroBlock = (props) => {
                     className='Intro__Logo' 
                     src={TankLogo} 
                     alt={`Tank's Ironclad Meats Logo`} 
-                    onClick={()=>window.open('https://youtu.be/_Qc9j3cFiLA')}
+                    onClick={()=>window.open('https://youtu.be/_Qc9j3cFiLA', '_self')}
                 />
             </div>
         </div>
