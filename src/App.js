@@ -74,7 +74,7 @@ function App() {
                     navClick={(e)=>handleNavClick(e)}
                     /> : null
                 }
-                <IntroBlock />
+                <IntroBlock dimensions={dimensions}/>
                 <About />
                 <MenuBlock />
                 <Contact />

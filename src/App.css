@@ -224,6 +224,7 @@ a {
     z-index: 0;
   }
   .Intro__Logo{
+    /* visibility: hidden; */
     position: absolute;
     padding: 1rem;
     width: 20%;
@@ -475,8 +476,9 @@ a {
     }
     .Intro__Logo{
       position: absolute;
-      padding: .25rem;
-      width: 50%;
+      padding-top: .25rem;
+      padding-right: 1rem;
+      width: 20%;
       top: 0;
       right: 0;
       z-index: 1;
@@ -486,7 +488,12 @@ a {
       top: 20%;
       /* background-color: black; */
     }
-    
+    .Intro__Background-Carousel{
+      position: relative;
+      top: 0;
+      width: 95%;
+      height: 100%;
+    }
     /* Typed menu, not in use */
     /* .Menu{
       display: flex;
@@ -775,21 +782,29 @@ a {
       right: 5%;
       /* bottom: 0; */
     }
+    .Intro__Logo-Background{
+      position: absolute;
+      top: 25;
+      left: 0;
+      width: 100%;
+    }
     .Intro__Logo{
       position: absolute;
-      padding: .25rem;
-      width: 50%;
+      padding-right: 2rem;
+      padding-top: .75rem;
+      width: 15%;
       top: 0;
       right: 0;
       z-index: 1;
     }
-    .Intro__Logo-Background{
-      position: absolute;
-      top: 25;
-      /* margin-left: auto; */
-      /* margin-right: auto; */
+    .Intro__Background-Carousel{
+      position: relative;
+      top: 0;
+      left: 0;
       width: 90%;
+      height: 100%;
     }
+
     /* .Menu{
       display: flex;
       flex-direction: row;
