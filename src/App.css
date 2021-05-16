@@ -394,6 +394,7 @@ a {
       bottom: 15%;
       left: 0;
       overflow-y: scroll;
+      overflow-x: hidden;
       scrollbar-width: none;
     }
     .Body::-webkit-scrollbar{
@@ -458,13 +459,12 @@ a {
       margin-right: 1rem;
     }
     .IntroBlock{
+      position: relative;
       display: block;
       width: 100%;
       height: 70vh;
-      margin-top: .5rem;
       margin-left: auto;
       margin-right: auto;
-      /* outline: 2px solid red; */
     }
     .Intro__Background{
       position: relative;
@@ -485,15 +485,15 @@ a {
     }
     .Intro__Logo-Background{
       position: absolute;
-      top: 15%;
+      top: 1%;
       /* background-color: black; */
     }
     .Intro__Background-Carousel{
       position: relative;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 40vh;
+      width: 380px;
+      height: 380px;
     }
     /* Typed menu, not in use */
     /* .Menu{
@@ -770,18 +770,14 @@ a {
       display: block;
       width: 85%;
       height: 100%;
-      margin-top: .5rem;
       margin-left: auto;
       margin-right: auto;
       padding-bottom: 4rem;
-      /* margin-bottom: 4rem; */
-      /* outline: 2px solid red; */
     }
     .Intro__Background{
       position: absolute;
       width: 100%;
       right: 5%;
-      /* bottom: 0; */
     }
     .Intro__Logo-Background{
       position: absolute;
@@ -791,7 +787,7 @@ a {
     }
     .Intro__Logo{
       position: absolute;
-      padding-right: 2rem;
+      padding-right: 4rem;
       padding-top: .75rem;
       width: 15%;
       top: 0;
@@ -800,10 +796,11 @@ a {
     }
     .Intro__Background-Carousel{
       position: relative;
+      padding-bottom: 20px;
       top: 0;
       left: 0;
-      width: 90%;
-      height: 80vh;
+      width: 360px;
+      height: 360px;
     }
 
     /* .Menu{

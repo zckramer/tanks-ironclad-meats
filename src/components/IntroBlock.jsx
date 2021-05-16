@@ -1,14 +1,21 @@
 import { useState, useEffect } from 'react';
 import TankLogo from '../images/tank_logo.png';
 import IntroVideo from '../images/RoughDraft01.mp4';
-import meat1 from '../images/meat01.jpg';
-import meat2 from '../images/meat02.jpg';
-import meat3 from '../images/meat03.jpg';
+import image01 from '../images/carousel/FireAndSmoke01.JPG';
+import image02 from '../images/carousel/Rotisserie01.JPG';
+import image03 from '../images/carousel/Ribs01.JPG';
+import image04 from '../images/carousel/Chicken_Plate01.JPG';
+import image05 from '../images/carousel/PulledPork_Plate01.JPG';
+import image06 from '../images/carousel/RibsAndChicken_Plate01.JPG';
 
+// TODO: Abstract the Image Carousel away from IntroBlock...
 const imagesArray = [
-    meat1,
-    meat2,
-    meat3
+    image01,
+    image02,
+    image03,
+    image04,
+    image05,
+    image06
 ]
 let carouselIndex = 0;
 
