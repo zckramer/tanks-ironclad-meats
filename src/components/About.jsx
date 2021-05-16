@@ -16,7 +16,7 @@ const About = (props) => {
                             url='https://www.facebook.com/pages/category/Bar/Brewstirs-Beechwold-Tavern-112882397218391/'
                             text='Brewstirs Beechwold Tavern'
                         />} 
-                p1='Every day, Noon - 11PM' 
+                p1='Every day, Noon - 10PM' 
                 p2='4955 Arbor Village Drive, Columbus, Ohio 43215' 
                 p3='' 
             />
