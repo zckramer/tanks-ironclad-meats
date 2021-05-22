@@ -6,7 +6,6 @@ const MenuBlock = () => {
             <Link 
                 text='Click here to check out the Menu!' 
                 url='/TanksMenu.pdf' 
-                // style={{color: 'white', fontSize: '30'}}
             />
         </div>
     )

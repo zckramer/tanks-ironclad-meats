@@ -13,7 +13,7 @@ import MenuBlock from './components/MenuBlock';
 import Contact from './components/Contact';
 import ComingSoon from './components/ComingSoon';
 import Modal from './components/Modal/Modal';
-
+import Footer from './components/KramerFooter';
 
 function App() {
     // const [activePage, setActivePage] = useState(<About/>);
@@ -42,7 +42,7 @@ function App() {
     })
 
     function handleNavClick (e) {
-        handleToggleModal();
+        toggleModal();
         if (e === "MENU") {
             if (dimensions.width > 1224) {
                 window.open('/TanksMenu.pdf');
@@ -56,7 +56,7 @@ function App() {
         scrollToElement.scrollIntoView();
     }
 
-    function handleToggleModal () {
+    function toggleModal () {
         setShowModal(!showModal);
     }
 
@@ -66,7 +66,7 @@ function App() {
             <div className='Body'>
                 <Header 
                     navClick={(e)=>handleNavClick(e)}
-                    closeModal={(e)=>handleToggleModal(e)}
+                    closeModal={(e)=>toggleModal(e)}
                     showModal={showModal}
                 />
                 {showModal ? 
@@ -78,33 +78,8 @@ function App() {
                 <About />
                 <MenuBlock />
                 <Contact />
+                <Footer />
             </div>
-                <p 
-                    className='Footer'
-                    style={{
-                        position: 'fixed',
-                        bottom: 0,
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)'
-                    }} 
-                >
-                    Web Design/Development by  
-                    <a href='https://www.github.com/zckramer' 
-                        rel='noreferrer'
-                        target='_blank'
-                        style={{
-                            textDecoration:'none', 
-                            color:'inherit', 
-                            backgroundColor:'#282c34DD', 
-                            margin: '4px', 
-                            borderRadius:'6px', 
-                            fontWeight:'bold',
-                            marginLeft: 'auto',
-                            marginRight: 'auto'
-                        }}
-                        > Zack Kramer 
-                    </a>
-                </p>
         </div>
     );
 }

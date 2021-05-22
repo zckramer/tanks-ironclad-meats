@@ -24,7 +24,7 @@ const IntroBlock = (props) => {
     
     function carouselIncrement () {
         carouselIndex >= imagesArray.length - 1 ? carouselIndex = 0 : carouselIndex = carouselIndex + 1;
-        console.log("carousel image index is... ", carouselIndex);
+        // console.log("carousel image index is... ", carouselIndex);
     }
 
     useEffect(() => {

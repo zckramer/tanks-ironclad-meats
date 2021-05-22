@@ -1,7 +1,7 @@
 import Link from './Link';
 import TextPanel from './TextPanel';
 
-const About = (props) => {
+const About = () => {
     return (
         <div className='About' >
             <TextPanel 
